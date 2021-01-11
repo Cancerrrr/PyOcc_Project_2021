@@ -1,19 +1,4 @@
-# ####左侧浮动窗口
-self.dockWidget_2.setFixedSize(321,511)
-MainWindow.addDockWidget(QtCore.Qt.LeftDockWidgetArea,self.dockWidget_2)
-
-# #### 工具栏
-# 工具一：打开文件
-exitAction = QAction(QIcon('./icons/open.gif'), '打开文件', MainWindow)
-exitAction.setShortcut('Ctrl+Q')
-exitAction.triggered.connect(QFileDialog.getOpenFileName)
-MainWindow.toolbar = MainWindow.addToolBar('Exit')
-MainWindow.toolbar.addAction(exitAction)
-
-
-
-##occ 依赖
-MainWindow.canva = qtViewer3d(MainWindow.canva)
+MainWindow.canva = qtViewer3d(MainWindow)
 # 显示设置
 MainWindow.canva.InitDriver()  # canva的驱动,设置驱动后，才能成功display
 
@@ -24,6 +9,20 @@ rgb_list2 = [128, 128, 128]
 
 display.set_bg_gradient_color(rgb_list1, rgb_list2)  # 设置背景渐变色
 display.display_triedron()  # display black trihedron
-MainWindow.setWindowTitle("Aim")
+MainWindow.setWindowTitle("Pv")
 # self.setWindowIcon(QIcon('./icons/aim.png'))        #设置程序图标
 MainWindow.setCentralWidget(MainWindow.canva)
+
+
+# ####左侧浮动窗口
+self.dockWidget_2.setFixedSize(321,511)
+MainWindow.addDockWidget(QtCore.Qt.LeftDockWidgetArea,self.dockWidget_2)
+
+# #### 工具栏
+
+# 工具一：打开文件
+exitAction = QAction(QIcon('./icons/open.jfif'), '打开文件', MainWindow)
+exitAction.setShortcut('Ctrl+Q')
+exitAction.triggered.connect(QFileDialog.getOpenFileName)
+MainWindow.toolbar = MainWindow.addToolBar('Exit')
+MainWindow.toolbar.addAction(exitAction)
