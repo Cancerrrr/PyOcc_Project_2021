@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>968</width>
+    <height>582</height>
+   </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>16777215</width>
+    <height>16777215</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <widget class="QDockWidget" name="dockWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>30</y>
+      <width>321</width>
+      <height>511</height>
+     </rect>
+    </property>
+    <widget class="QWidget" name="dockWidgetContents_2">
+     <widget class="QTabWidget" name="tabWidget_2">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>316</width>
+        <height>487</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>1</horstretch>
+        <verstretch>1</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>316</width>
+        <height>487</height>
+       </size>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tab_5">
+       <attribute name="title">
+        <string>General Input</string>
+       </attribute>
+       <widget class="QToolBox" name="toolBox_2">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>311</width>
+          <height>391</height>
+         </rect>
+        </property>
+        <property name="currentIndex">
+         <number>0</number>
+        </property>
+        <widget class="QWidget" name="page_3">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>311</width>
+           <height>339</height>
+          </rect>
+         </property>
+         <attribute name="label">
+          <string>Element Data</string>
+         </attribute>
+         <widget class="QTableWidget" name="tableWidget_2">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>311</width>
+            <height>341</height>
+           </rect>
+          </property>
+          <property name="showGrid">
+           <bool>true</bool>
+          </property>
+          <property name="gridStyle">
+           <enum>Qt::SolidLine</enum>
+          </property>
+          <property name="sortingEnabled">
+           <bool>false</bool>
+          </property>
+          <property name="wordWrap">
+           <bool>true</bool>
+          </property>
+          <attribute name="horizontalHeaderVisible">
+           <bool>false</bool>
+          </attribute>
+          <attribute name="horizontalHeaderHighlightSections">
+           <bool>true</bool>
+          </attribute>
+          <attribute name="verticalHeaderVisible">
+           <bool>false</bool>
+          </attribute>
+          <attribute name="verticalHeaderCascadingSectionResizes">
+           <bool>false</bool>
+          </attribute>
+          <attribute name="verticalHeaderHighlightSections">
+           <bool>true</bool>
+          </attribute>
+          <row>
+           <property name="text">
+            <string>Elements</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>From Node</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>To Node</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>Element Type</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>Diameter Basis</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>Inside Diameter</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>Length</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>Finished Thickness</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>Nominal Thickness</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>Internal Corrossion All</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>External Corrosion All</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>Wind Diameter Multiplier</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>Material Name</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>Longitudinal Seam Efficiency</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>Circumferential Seam Efficiency</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>Internal Pressure</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>Temp. for Internal Pressure</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>External Pressure</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>Temp. for External Pressure</string>
+           </property>
+          </row>
+          <column>
+           <property name="text">
+            <string>Data</string>
+           </property>
+          </column>
+          <item row="0" column="0">
+           <property name="text">
+            <string/>
+           </property>
+          </item>
+          <item row="1" column="0">
+           <property name="text">
+            <string notr="true"/>
+           </property>
+          </item>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="page_4">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>311</width>
+           <height>339</height>
+          </rect>
+         </property>
+         <attribute name="label">
+          <string>Additional Element Data</string>
+         </attribute>
+        </widget>
+       </widget>
+       <widget class="QPlainTextEdit" name="plainTextEdit_2">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>390</y>
+          <width>311</width>
+          <height>71</height>
+         </rect>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_6">
+       <attribute name="title">
+        <string>Design Constraints</string>
+       </attribute>
+      </widget>
+      <widget class="QWidget" name="tab_7">
+       <attribute name="title">
+        <string>Load Cases</string>
+       </attribute>
+      </widget>
+      <widget class="QWidget" name="tab_8">
+       <attribute name="title">
+        <string>Wind Data</string>
+       </attribute>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>968</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuOutput">
+    <property name="title">
+     <string>Output</string>
+    </property>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuOutput"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
