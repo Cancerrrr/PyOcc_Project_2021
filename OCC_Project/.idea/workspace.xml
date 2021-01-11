@@ -2,12 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="239c5ac4-78d0-4191-b4d6-571959e3bc1d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UI/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/Main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UI/Main.ui" beforeDir="false" afterPath="$PROJECT_DIR$/UI/Main.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/open.jfif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui_test/save4Ui_Code" beforeDir="false" afterPath="$PROJECT_DIR$/ui_test/save4Ui_Code" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/icons/cone.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/icons/cylinder.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/icons/dish.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/icons/input.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/icons/open.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/icons/output.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/icons/save.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/icons/semicircle.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/icons/skirt.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/icons/sphere.jpg" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -205,7 +212,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

@@ -329,7 +329,7 @@
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>../icons/save.jpg</normaloff>../icons/save.jpg</iconset>
+           <normaloff>../icons/saveicon.png</normaloff>../icons/saveicon.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -359,7 +359,7 @@
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>../icons/open.jpg</normaloff>../icons/open.jpg</iconset>
+           <normaloff>../icons/o443817.png</normaloff>../icons/o443817.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -414,23 +414,6 @@
        </rect>
       </property>
       <layout class="QGridLayout" name="gridLayout_2">
-       <item row="1" column="0">
-        <widget class="QToolButton" name="toolButton_6">
-         <property name="text">
-          <string>...</string>
-         </property>
-         <property name="icon">
-          <iconset>
-           <normaloff>../icons/semicircle.jpg</normaloff>../icons/semicircle.jpg</iconset>
-         </property>
-         <property name="iconSize">
-          <size>
-           <width>25</width>
-           <height>25</height>
-          </size>
-         </property>
-        </widget>
-       </item>
        <item row="1" column="1">
         <widget class="QToolButton" name="toolButton_7">
          <property name="text">
@@ -438,58 +421,7 @@
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>../icons/dish.jpg</normaloff>../icons/dish.jpg</iconset>
-         </property>
-         <property name="iconSize">
-          <size>
-           <width>25</width>
-           <height>25</height>
-          </size>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="0">
-        <widget class="QToolButton" name="toolButton_3">
-         <property name="text">
-          <string>...</string>
-         </property>
-         <property name="icon">
-          <iconset>
-           <normaloff>../icons/cylinder.jpg</normaloff>../icons/cylinder.jpg</iconset>
-         </property>
-         <property name="iconSize">
-          <size>
-           <width>25</width>
-           <height>25</height>
-          </size>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="2">
-        <widget class="QToolButton" name="toolButton_8">
-         <property name="text">
-          <string>...</string>
-         </property>
-         <property name="icon">
-          <iconset>
-           <normaloff>../icons/skirt.jpg</normaloff>../icons/skirt.jpg</iconset>
-         </property>
-         <property name="iconSize">
-          <size>
-           <width>25</width>
-           <height>25</height>
-          </size>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="1">
-        <widget class="QToolButton" name="toolButton_4">
-         <property name="text">
-          <string>...</string>
-         </property>
-         <property name="icon">
-          <iconset>
-           <normaloff>../icons/cone.jpg</normaloff>../icons/cone.jpg</iconset>
+           <normaloff>../icons/o324408.png</normaloff>../icons/o324408.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -506,7 +438,109 @@
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>../icons/sphere.jpg</normaloff>../icons/sphere.jpg</iconset>
+           <normaloff>../icons/o324409.png</normaloff>../icons/o324409.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>25</width>
+           <height>25</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QToolButton" name="toolButton_4">
+         <property name="text">
+          <string>...</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>../icons/o324407.png</normaloff>../icons/o324407.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>25</width>
+           <height>25</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="2">
+        <widget class="QToolButton" name="toolButton_8">
+         <property name="text">
+          <string>...</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>../icons/o324410.png</normaloff>../icons/o324410.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>25</width>
+           <height>25</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QToolButton" name="toolButton_6">
+         <property name="text">
+          <string>...</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>../icons/o324406.png</normaloff>../icons/o324406.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>25</width>
+           <height>25</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QToolButton" name="toolButton_3">
+         <property name="text">
+          <string>...</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>../icons/o324405.png</normaloff>../icons/o324405.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>25</width>
+           <height>25</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="3">
+        <widget class="QToolButton" name="toolButton_11">
+         <property name="text">
+          <string>...</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>../icons/o323821.png</normaloff>../icons/o323821.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>25</width>
+           <height>25</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="3">
+        <widget class="QToolButton" name="toolButton_12">
+         <property name="text">
+          <string>...</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>../icons/o324412.png</normaloff>../icons/o324412.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -561,7 +595,7 @@
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>../icons/input.jpg</normaloff>../icons/input.jpg</iconset>
+           <normaloff>../icons/o443817.png</normaloff>../icons/o443817.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -578,7 +612,7 @@
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>../icons/output.jpg</normaloff>../icons/output.jpg</iconset>
+           <normaloff>../icons/o377790.png</normaloff>../icons/o377790.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -700,7 +734,7 @@
         <x>820</x>
         <y>0</y>
         <width>211</width>
-        <height>61</height>
+        <height>74</height>
        </rect>
       </property>
       <layout class="QGridLayout" name="gridLayout_4">
@@ -760,6 +794,86 @@
       <property name="text">
        <string>Units/Code</string>
       </property>
+     </widget>
+     <widget class="QWidget" name="gridLayoutWidget_5">
+      <property name="geometry">
+       <rect>
+        <x>710</x>
+        <y>0</y>
+        <width>101</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_5">
+       <item row="0" column="0">
+        <widget class="QToolButton" name="toolButton_13">
+         <property name="text">
+          <string>...</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>../icons/o361891.png</normaloff>../icons/o361891.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>20</width>
+           <height>20</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QToolButton" name="toolButton_14">
+         <property name="text">
+          <string>...</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>../icons/view_icon.png</normaloff>../icons/view_icon.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>20</width>
+           <height>20</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QToolButton" name="toolButton_15">
+         <property name="text">
+          <string>...</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>../icons/o443820.png</normaloff>../icons/o443820.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>20</width>
+           <height>20</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QToolButton" name="toolButton_16">
+         <property name="text">
+          <string>...</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>../icons/o377605.png</normaloff>../icons/o377605.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>20</width>
+           <height>20</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </widget>
     </widget>
     <widget class="QWidget" name="tab_2">
