@@ -82,7 +82,7 @@
            <x>0</x>
            <y>0</y>
            <width>311</width>
-           <height>339</height>
+           <height>323</height>
           </rect>
          </property>
          <attribute name="label">
@@ -253,7 +253,7 @@
            <x>0</x>
            <y>0</y>
            <width>311</width>
-           <height>339</height>
+           <height>323</height>
           </rect>
          </property>
          <attribute name="label">
@@ -298,7 +298,7 @@
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>1041</width>
+      <width>1051</width>
       <height>111</height>
      </rect>
     </property>
@@ -315,7 +315,7 @@
         <x>0</x>
         <y>0</y>
         <width>161</width>
-        <height>61</height>
+        <height>68</height>
        </rect>
       </property>
       <layout class="QGridLayout" name="gridLayout">
@@ -329,7 +329,7 @@
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>../icons/saveicon.png</normaloff>../icons/saveicon.png</iconset>
+           <normaloff>../icons/3/saveicon.png</normaloff>../icons/3/saveicon.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -359,7 +359,7 @@
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>../icons/o443817.png</normaloff>../icons/o443817.png</iconset>
+           <normaloff>../icons/3/openicon.png</normaloff>../icons/3/openicon.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -410,7 +410,7 @@
         <x>160</x>
         <y>0</y>
         <width>181</width>
-        <height>70</height>
+        <height>82</height>
        </rect>
       </property>
       <layout class="QGridLayout" name="gridLayout_2">
@@ -421,7 +421,7 @@
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>../icons/o324408.png</normaloff>../icons/o324408.png</iconset>
+           <normaloff>../icons/4/o324408.png</normaloff>../icons/4/o324408.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -438,7 +438,7 @@
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>../icons/o324409.png</normaloff>../icons/o324409.png</iconset>
+           <normaloff>../icons/4/o324409.png</normaloff>../icons/4/o324409.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -455,7 +455,7 @@
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>../icons/o324407.png</normaloff>../icons/o324407.png</iconset>
+           <normaloff>../icons/4/o324407.png</normaloff>../icons/4/o324407.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -472,7 +472,7 @@
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>../icons/o324410.png</normaloff>../icons/o324410.png</iconset>
+           <normaloff>../icons/4/o324410.png</normaloff>../icons/4/o324410.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -489,24 +489,7 @@
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>../icons/o324406.png</normaloff>../icons/o324406.png</iconset>
-         </property>
-         <property name="iconSize">
-          <size>
-           <width>25</width>
-           <height>25</height>
-          </size>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="0">
-        <widget class="QToolButton" name="toolButton_3">
-         <property name="text">
-          <string>...</string>
-         </property>
-         <property name="icon">
-          <iconset>
-           <normaloff>../icons/o324405.png</normaloff>../icons/o324405.png</iconset>
+           <normaloff>../icons/4/o324406.png</normaloff>../icons/4/o324406.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -523,7 +506,7 @@
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>../icons/o323821.png</normaloff>../icons/o323821.png</iconset>
+           <normaloff>../icons/4/o324411.png</normaloff>../icons/4/o324411.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -540,7 +523,24 @@
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>../icons/o324412.png</normaloff>../icons/o324412.png</iconset>
+           <normaloff>../icons/4/o324412.png</normaloff>../icons/4/o324412.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>25</width>
+           <height>25</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QToolButton" name="toolButton_17">
+         <property name="text">
+          <string>...</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>../icons/4/o324405.png</normaloff>../icons/4/o324405.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -595,7 +595,7 @@
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>../icons/o443817.png</normaloff>../icons/o443817.png</iconset>
+           <normaloff>../icons/6/inputtabsicon.png</normaloff>../icons/6/inputtabsicon.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -734,7 +734,7 @@
         <x>820</x>
         <y>0</y>
         <width>211</width>
-        <height>74</height>
+        <height>104</height>
        </rect>
       </property>
       <layout class="QGridLayout" name="gridLayout_4">
@@ -812,7 +812,7 @@
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>../icons/o361891.png</normaloff>../icons/o361891.png</iconset>
+           <normaloff>../icons/9/analyzeicon.png</normaloff>../icons/9/analyzeicon.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -829,7 +829,7 @@
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>../icons/view_icon.png</normaloff>../icons/view_icon.png</iconset>
+           <normaloff>../icons/9/o322498.png</normaloff>../icons/9/o322498.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -846,7 +846,7 @@
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>../icons/o443820.png</normaloff>../icons/o443820.png</iconset>
+           <normaloff>../icons/9/o322496.png</normaloff>../icons/9/o322496.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -914,7 +914,7 @@
      <x>0</x>
      <y>0</y>
      <width>1040</width>
-     <height>23</height>
+     <height>24</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
