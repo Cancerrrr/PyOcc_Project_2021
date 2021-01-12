@@ -5,16 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UI/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/Main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UI/Main.ui" beforeDir="false" afterPath="$PROJECT_DIR$/UI/Main.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/cone.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/cylinder.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/dish.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/input.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/open.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/output.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/save.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/semicircle.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/skirt.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/sphere.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui_test/save4Ui_Code" beforeDir="false" afterPath="$PROJECT_DIR$/ui_test/save4Ui_Code" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,7 +28,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../cadviewer" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
