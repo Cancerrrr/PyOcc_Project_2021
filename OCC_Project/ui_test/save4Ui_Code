@@ -1,4 +1,8 @@
-MainWindow.canva = qtViewer3d(MainWindow)
+MainWindow.canva = qtViewer3d(self.centralwidget)
+MainWindow.canva.resize(735, 550)
+MainWindow.canva.move(330, 140)
+MainWindow.canva.setSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+
 # 显示设置
 MainWindow.canva.InitDriver()  # canva的驱动,设置驱动后，才能成功display
 
