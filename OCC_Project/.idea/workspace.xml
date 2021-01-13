@@ -2,66 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="239c5ac4-78d0-4191-b4d6-571959e3bc1d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/OCC_Example/Elliptical.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/FunctionTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/OCC_Example/Cube.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UI/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/Main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/Main.ui" beforeDir="false" afterPath="$PROJECT_DIR$/UI/Main.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/o319255.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/o323819.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/o323820.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/o323821.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/o323822.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/o323823.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/o323827.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/o324403.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/o324405.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/o324406.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/o324407.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/o324408.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/o324409.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/o324410.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/o324411.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/o324412.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/o330059.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/o361891.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/o374697.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/o377474.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/o377475.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/o377477.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/o377478.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/o377483.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/o377484.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/o377600.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/o377601.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/o377604.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/o377605.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/o377606.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/o377607.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/o377786.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/o377788.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/o377789.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/o377790.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/o377791.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/o377828.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/o377833.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/o377834.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/o377836.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/o377837.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/o377838.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/o377839.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/o427893.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/o427963.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/o427965.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/o427982.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/o427984.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/o427985.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/o443817.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/o443819.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/o443820.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/pipepropertiesicon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/platforminputicon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/propagateelementdiametericon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/saveicon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/view_icon.png" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -89,6 +33,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\pycharm_project\PyOcc_Project_2021\OCC_Project\OCC_Example" />
       <recent name="F:\pycharm_project\OCC_Project\UI" />
     </key>
   </component>
@@ -126,7 +71,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Function Test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Elliptical head" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="OCC_Project" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -138,7 +83,28 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="F:\pycharm_project\OCC_Project\UI\FunctionTest.py" />
+      <option name="SCRIPT_NAME" value="F:\pycharm_project\PyOcc_Project_2021\OCC_Project\OCC_Example\Elliptical.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Elliptical" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="OCC_Project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/OCC_Example/Elliptical.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -159,28 +125,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/UI/FunctionTest.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Main" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="OCC_Project" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/UI/Main.py" />
+      <option name="SCRIPT_NAME" value="F:\pycharm_project\PyOcc_Project_2021\OCC_Project\OCC_Example\Cube.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -234,10 +179,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.Application" />
-        <item itemvalue="Python.mainwindow" />
-        <item itemvalue="Python.Main" />
+        <item itemvalue="Python.Elliptical" />
+        <item itemvalue="Python.Elliptical head" />
         <item itemvalue="Python.FunctionTest" />
-        <item itemvalue="Python.Function Test" />
+        <item itemvalue="Python.mainwindow" />
       </list>
     </recent_temporary>
   </component>
