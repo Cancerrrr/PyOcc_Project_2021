@@ -23,14 +23,10 @@ from OCC.Display.backend import load_pyqt5
 from OCC.Display.SimpleGui import init_display
 from OCC.Core.BRepPrimAPI import BRepPrimAPI_MakeBox
 
-# check for pyqt5
-if not load_pyqt5():
-    print("pyqt5 required to run this test")
-    sys.exit()
+class Cube():
+    def __init__(self):
+        self.my_box = BRepPrimAPI_MakeBox(10., 20., 30.).Shape()
 
-print('pyqt5 test running ...')
-pyqt5_display, start_display, add_menu, add_function_to_menu = init_display('qt-pyqt5')
-my_box = BRepPrimAPI_MakeBox(10., 20., 30.).Shape()
-pyqt5_display.DisplayShape(my_box, update=True)
-start_display()
-print('pyqt5 test ok.')
+
+    def getBox(self):
+        return self.my_box

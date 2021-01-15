@@ -48,7 +48,6 @@ class qtBaseViewer(QtOpenGL.QGLWidget):
         It must be an integer
         '''
         win_id = self.winId()  # this returns either an int or voitptr
-
         if "%s" % type(win_id) == "<type 'PyCObject'>":  # PySide
             ### with PySide, self.winId() does not return an integer
             if sys.platform == "win32":

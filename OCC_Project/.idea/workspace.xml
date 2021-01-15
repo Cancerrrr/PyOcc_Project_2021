@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="239c5ac4-78d0-4191-b4d6-571959e3bc1d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/OCC_Example/Elliptical.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/FunctionTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/OCC_Example/Cube.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OCC_Example/Cube.py" beforeDir="false" afterPath="$PROJECT_DIR$/OCC_Example/Cube.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UI/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/Main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/Main.ui" beforeDir="false" afterPath="$PROJECT_DIR$/UI/Main.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui_test/qtDisplay.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui_test/qtDisplay.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui_test/save4Ui_Code" beforeDir="false" afterPath="$PROJECT_DIR$/ui_test/save4Ui_Code" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,7 +31,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../cadviewer" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="tasks" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -179,10 +181,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.Application" />
+        <item itemvalue="Python.mainwindow" />
         <item itemvalue="Python.Elliptical" />
         <item itemvalue="Python.Elliptical head" />
         <item itemvalue="Python.FunctionTest" />
-        <item itemvalue="Python.mainwindow" />
       </list>
     </recent_temporary>
   </component>

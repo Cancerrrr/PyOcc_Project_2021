@@ -6,27 +6,29 @@ MainWindow.canva.setSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizeP
 # 显示设置
 MainWindow.canva.InitDriver()  # canva的驱动,设置驱动后，才能成功display
 
-display = MainWindow.canva._display
+self.display = MainWindow.canva._display
 
 rgb_list1 = [206, 215, 222]
 rgb_list2 = [128, 128, 128]
 
-display.set_bg_gradient_color(rgb_list1, rgb_list2)  # 设置背景渐变色
-display.display_triedron()  # display black trihedron
-MainWindow.setWindowTitle("Pv")
-# self.setWindowIcon(QIcon('./icons/aim.png'))        #设置程序图标
-MainWindow.setCentralWidget(MainWindow.canva)
+self.display.set_bg_gradient_color(rgb_list1, rgb_list2)  # 设置背景渐变色
+self.display.display_triedron()  # display black trihedron
+
+#setAction
+self.pushButton_4.clicked.connect(self.showElliptical)
 
 
-# ####左侧浮动窗口
-self.dockWidget_2.setFixedSize(321,511)
-MainWindow.addDockWidget(QtCore.Qt.LeftDockWidgetArea,self.dockWidget_2)
+def showElliptical(self):
+    Elli = Elliptical.Elliptical_Head()
+    A = Elli.getElliptical_Head()
+    self.display.EraseAll()
+    self.display.ResetView()
+    self.display.DisplayShape(A.Shape(), update=True)
 
-# #### 工具栏
 
-# 工具一：打开文件
-exitAction = QAction(QIcon('./icons/open.jfif'), '打开文件', MainWindow)
-exitAction.setShortcut('Ctrl+Q')
-exitAction.triggered.connect(QFileDialog.getOpenFileName)
-MainWindow.toolbar = MainWindow.addToolBar('Exit')
-MainWindow.toolbar.addAction(exitAction)
+def showCube(self):
+    C = Cube.Cube()
+    mybox = C.getBox()
+    self.display.EraseAll()
+    self.display.ResetView()
+    self.display.DisplayShape(mybox, update=True)
