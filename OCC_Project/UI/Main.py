@@ -9,7 +9,9 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtWidgets import QDialog
 
+from UI import disk_design_dialog
 from OCC_Example import Elliptical
 from ui_test.qtDisplay import qtViewer3d
 from OCC_Example import Cube
@@ -501,7 +503,7 @@ class Ui_MainWindow(object):
 
         #setAction
         self.pushButton_4.clicked.connect(self.showElliptical)
-        self.pushButton_3.clicked.connect(self.showCube)
+        self.pushButton_3.clicked.connect(self.design_disk)
 
 
         self.retranslateUi(MainWindow)
@@ -610,3 +612,12 @@ class Ui_MainWindow(object):
         self.display.EraseAll()
         self.display.ResetView()
         self.display.DisplayShape(mybox, update=True)
+
+    def design_disk(self):
+        disk = disk_design_dialog.Ui_Dialog()
+        Dialog = QDialog()
+        disk.setupUi(Dialog)
+        Dialog.show()
+        Dialog.exec_()
+
+

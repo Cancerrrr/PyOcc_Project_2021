@@ -16,6 +16,7 @@ self.display.display_triedron()  # display black trihedron
 
 #setAction
 self.pushButton_4.clicked.connect(self.showElliptical)
+self.pushButton_3.clicked.connect(self.showCube)
 
 
 def showElliptical(self):
