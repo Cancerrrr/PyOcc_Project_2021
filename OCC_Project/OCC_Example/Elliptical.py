@@ -19,8 +19,8 @@ class Elliptical_Head():
         b = math.pi
         R = 500  # 外长径
         r = 300  # 外短径
-        l = 100  # 突出的长度
-        a = 35  # 壁厚
+        l = 300  # 突出的长度
+        a = 40  # 壁厚
         CircleAxis = gp_Ax2(Location, Axis)
         aPnt1 = gp_Pnt(0, 0, R)
         aPnt2 = gp_Pnt(r, 0, 0)

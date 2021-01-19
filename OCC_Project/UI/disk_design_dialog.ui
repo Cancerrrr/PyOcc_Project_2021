@@ -15,53 +15,36 @@
   </property>
   <layout class="QGridLayout" name="gridLayout_2">
    <item row="0" column="0">
-    <layout class="QGridLayout" name="gridLayout" rowstretch="1,1,1,1,1" columnstretch="0,1,1,1,1">
-     <item row="1" column="3">
-      <widget class="QLabel" name="label_4">
-       <property name="text">
-        <string>直边长度</string>
-       </property>
-      </widget>
-     </item>
-     <item row="3" column="4">
-      <widget class="QLineEdit" name="lineEdit_8"/>
-     </item>
-     <item row="2" column="3">
-      <widget class="QLabel" name="label_6">
-       <property name="text">
-        <string>封头转角区半径</string>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="1">
-      <widget class="QLabel" name="label_3">
-       <property name="text">
-        <string>设备内径(mm)</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="1">
-      <widget class="QLabel" name="label">
-       <property name="text">
-        <string>内压力(MPa)</string>
-       </property>
-      </widget>
-     </item>
+    <layout class="QGridLayout" name="gridLayout" rowstretch="1,0,0,0" columnstretch="0,0,0,0,0">
      <item row="0" column="2">
       <widget class="QLineEdit" name="lineEdit"/>
      </item>
      <item row="2" column="1">
-      <widget class="QLabel" name="label_5">
+      <widget class="QLabel" name="label_7">
        <property name="text">
-        <string>碟形封头球面内半径</string>
+        <string>设计厚度(mm)</string>
        </property>
       </widget>
      </item>
-     <item row="1" column="2">
-      <widget class="QLineEdit" name="lineEdit_3"/>
+     <item row="3" column="1">
+      <widget class="QLabel" name="label_9">
+       <property name="text">
+        <string>焊接系数</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="4">
+      <widget class="QComboBox" name="comboBox"/>
      </item>
      <item row="2" column="4">
-      <widget class="QLineEdit" name="lineEdit_6"/>
+      <widget class="QLineEdit" name="lineEdit_8"/>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>设计压力(MPa)</string>
+       </property>
+      </widget>
      </item>
      <item row="0" column="3">
       <widget class="QLabel" name="label_2">
@@ -70,51 +53,48 @@
        </property>
       </widget>
      </item>
-     <item row="0" column="4">
-      <widget class="QLineEdit" name="lineEdit_2"/>
-     </item>
-     <item row="3" column="3">
-      <widget class="QLabel" name="label_8">
-       <property name="text">
-        <string>腐蚀厚度</string>
-       </property>
-      </widget>
-     </item>
      <item row="2" column="2">
-      <widget class="QLineEdit" name="lineEdit_5"/>
-     </item>
-     <item row="1" column="4">
-      <widget class="QLineEdit" name="lineEdit_4"/>
-     </item>
-     <item row="3" column="2">
       <widget class="QLineEdit" name="lineEdit_7"/>
      </item>
-     <item row="3" column="1">
-      <widget class="QLabel" name="label_7">
-       <property name="text">
-        <string>设计厚度</string>
-       </property>
-      </widget>
-     </item>
-     <item row="4" column="1">
-      <widget class="QLabel" name="label_9">
-       <property name="text">
-        <string>焊接系数</string>
-       </property>
-      </widget>
-     </item>
-     <item row="4" column="2">
-      <widget class="QLineEdit" name="lineEdit_9"/>
-     </item>
-     <item row="4" column="3">
+     <item row="3" column="3">
       <widget class="QLabel" name="label_10">
        <property name="text">
         <string>材料选择</string>
        </property>
       </widget>
      </item>
-     <item row="4" column="4">
-      <widget class="QComboBox" name="comboBox"/>
+     <item row="0" column="4">
+      <widget class="QLineEdit" name="lineEdit_2"/>
+     </item>
+     <item row="2" column="3">
+      <widget class="QLabel" name="label_8">
+       <property name="text">
+        <string>腐蚀厚度</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="2">
+      <widget class="QLineEdit" name="lineEdit_9"/>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLabel" name="label_3">
+       <property name="text">
+        <string>壳体内半径(mm)</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QLineEdit" name="lineEdit_3"/>
+     </item>
+     <item row="1" column="3">
+      <widget class="QLabel" name="label_4">
+       <property name="text">
+        <string>筒体长度(Mm)</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="4">
+      <widget class="QLineEdit" name="lineEdit_4"/>
      </item>
     </layout>
    </item>

@@ -9,15 +9,22 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-from PyQt5.QtWidgets import QDialog
+from PyQt5.QtWidgets import QDialog, QTableWidget, QTableWidgetItem
 
 from UI import disk_design_dialog
 from OCC_Example import Elliptical
 from ui_test.qtDisplay import qtViewer3d
-from OCC_Example import Cube
+from OCC_Example import cylinder
 
 
 class Ui_MainWindow(object):
+    def __init__(self):
+        self.disk = disk_design_dialog.Ui_Dialog()
+        self.Dialog = QDialog()
+        self.disk.setupUi(self.Dialog)
+        self.disk.buttonBox.accepted.connect(self.sendmsg)
+        self.disk.buttonBox.rejected.connect(self.Dialog.rejected)
+
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(1067, 711)
@@ -503,7 +510,7 @@ class Ui_MainWindow(object):
 
         #setAction
         self.pushButton_4.clicked.connect(self.showElliptical)
-        self.pushButton_3.clicked.connect(self.design_disk)
+        self.pushButton_3.clicked.connect(self.design_Cylinder)
 
 
         self.retranslateUi(MainWindow)
@@ -605,19 +612,18 @@ class Ui_MainWindow(object):
         self.display.ResetView()
         self.display.DisplayShape(A.Shape(), update=True)
 
-
-    def showCube(self):
-        C = Cube.Cube()
-        mybox = C.getBox()
+    def showCylinder(self):
+        C = cylinder.Cylinder()
         self.display.EraseAll()
         self.display.ResetView()
-        self.display.DisplayShape(mybox, update=True)
-
-    def design_disk(self):
-        disk = disk_design_dialog.Ui_Dialog()
-        Dialog = QDialog()
-        disk.setupUi(Dialog)
-        Dialog.show()
-        Dialog.exec_()
+        self.display.DisplayShape(C.new_thing1,update=True)
 
 
+    def design_Cylinder(self):
+        self.Dialog.show()
+        self.Dialog.exec_()
+
+
+    def sendmsg(self):
+        txt = self.disk.lineEdit.text()
+        self.tableWidget_2.setItem(1, -1, QTableWidgetItem(str(txt)))

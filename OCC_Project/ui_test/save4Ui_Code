@@ -33,3 +33,10 @@ def showCube(self):
     self.display.EraseAll()
     self.display.ResetView()
     self.display.DisplayShape(mybox, update=True)
+
+def design_disk(self):
+    disk = disk_design_dialog.Ui_Dialog()
+    Dialog = QDialog()
+    disk.setupUi(Dialog)
+    Dialog.show()
+    Dialog.exec_()
