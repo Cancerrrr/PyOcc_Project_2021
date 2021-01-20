@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'disk_design_dialog.ui'
+# Form implementation generated from reading ui file 'Cylinder_design_dialog.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.2
 #

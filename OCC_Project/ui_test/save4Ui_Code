@@ -1,3 +1,15 @@
+def __init__(self):
+    self.disk = disk_design_dialog.Ui_Dialog()
+    self.Dialog = QDialog()
+    self.disk.setupUi(self.Dialog)
+    self.disk.buttonBox.accepted.connect(self.sendmsg)
+    self.disk.buttonBox.rejected.connect(self.Dialog.rejected)
+
+
+
+
+
+
 MainWindow.canva = qtViewer3d(self.centralwidget)
 MainWindow.canva.resize(735, 550)
 MainWindow.canva.move(330, 140)
@@ -16,7 +28,7 @@ self.display.display_triedron()  # display black trihedron
 
 #setAction
 self.pushButton_4.clicked.connect(self.showElliptical)
-self.pushButton_3.clicked.connect(self.showCube)
+self.pushButton_3.clicked.connect(self.design_Cylinder)
 
 
 def showElliptical(self):
@@ -27,16 +39,33 @@ def showElliptical(self):
     self.display.DisplayShape(A.Shape(), update=True)
 
 
-def showCube(self):
-    C = Cube.Cube()
-    mybox = C.getBox()
-    self.display.EraseAll()
-    self.display.ResetView()
-    self.display.DisplayShape(mybox, update=True)
-
 def design_disk(self):
     disk = disk_design_dialog.Ui_Dialog()
     Dialog = QDialog()
     disk.setupUi(Dialog)
     Dialog.show()
     Dialog.exec_()
+
+
+def showElliptical(self):
+    Elli = Elliptical.Elliptical_Head()
+    A = Elli.getElliptical_Head()
+    self.display.EraseAll()
+    self.display.ResetView()
+    self.display.DisplayShape(A.Shape(), update=True)
+
+
+def design_Cylinder(self):
+    self.Dialog.show()
+    self.Dialog.exec_()
+
+
+def sendmsg(self):
+    R = float(self.disk.lineEdit_3.text())
+    t = float(self.disk.lineEdit_7.text())
+    L = float(self.disk.lineEdit_4.text())
+
+    C = cylinder.Cylinder(R, t, L)
+    self.display.EraseAll()
+    self.display.ResetView()
+    self.display.DisplayShape(C.new_thing1, update=True)

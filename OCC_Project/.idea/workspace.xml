@@ -2,13 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="239c5ac4-78d0-4191-b4d6-571959e3bc1d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/OCC_Example/cylinder.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UI/Error_Dialog.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UI/Error_Dialog.ui" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OCC_Example/Elliptical.py" beforeDir="false" afterPath="$PROJECT_DIR$/OCC_Example/Elliptical.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/Application.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/Application.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UI/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/Main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/disk_design_dialog.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/disk_design_dialog.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/disk_design_dialog.ui" beforeDir="false" afterPath="$PROJECT_DIR$/UI/disk_design_dialog.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/disk_design_dialog.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/Cylinder_design_dialog.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/disk_design_dialog.ui" beforeDir="false" afterPath="$PROJECT_DIR$/UI/Cylinder_design_dialog.ui" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ui_test/save4Ui_Code" beforeDir="false" afterPath="$PROJECT_DIR$/ui_test/save4Ui_Code" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -56,7 +56,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.cylinder">
+  <component name="RunManager" selected="Python.Application">
     <configuration name="Application" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="OCC_Project" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -153,7 +153,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/UI/disk_design_dialog.py" />
+      <option name="SCRIPT_NAME" value="F:\pycharm_project\PyOcc_Project_2021\OCC_Project\UI\Cylinder_design_dialog.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -162,7 +162,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="mainwindow" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="msgbox" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="OCC_Project" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -174,7 +174,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ui_test/mainwindow.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ui_test/msgbox.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -185,11 +185,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.cylinder" />
         <item itemvalue="Python.Application" />
+        <item itemvalue="Python.msgbox" />
+        <item itemvalue="Python.cylinder" />
         <item itemvalue="Python.Elliptical" />
         <item itemvalue="Python.disk_design_dialog" />
-        <item itemvalue="Python.mainwindow" />
       </list>
     </recent_temporary>
   </component>

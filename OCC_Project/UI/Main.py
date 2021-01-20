@@ -9,9 +9,10 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-from PyQt5.QtWidgets import QDialog, QTableWidget, QTableWidgetItem
+from PyQt5.QtWidgets import QDialog, QTableWidget, QTableWidgetItem, QMessageBox
 
-from UI import disk_design_dialog
+from UI import Cylinder_design_dialog
+from UI import Error_Dialog
 from OCC_Example import Elliptical
 from ui_test.qtDisplay import qtViewer3d
 from OCC_Example import cylinder
@@ -19,11 +20,18 @@ from OCC_Example import cylinder
 
 class Ui_MainWindow(object):
     def __init__(self):
-        self.disk = disk_design_dialog.Ui_Dialog()
+        #Initialize design UI
+        self.disk = Cylinder_design_dialog.Ui_Dialog()
         self.Dialog = QDialog()
         self.disk.setupUi(self.Dialog)
         self.disk.buttonBox.accepted.connect(self.sendmsg)
         self.disk.buttonBox.rejected.connect(self.Dialog.rejected)
+
+        #Error Dialog
+        self.Error_dialog = Error_Dialog.Ui_Dialog()
+        self.E_Dialog = QDialog()
+        self.Error_dialog.setupUi(self.E_Dialog)
+
 
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
@@ -612,18 +620,40 @@ class Ui_MainWindow(object):
         self.display.ResetView()
         self.display.DisplayShape(A.Shape(), update=True)
 
-    def showCylinder(self):
-        C = cylinder.Cylinder()
-        self.display.EraseAll()
-        self.display.ResetView()
-        self.display.DisplayShape(C.new_thing1,update=True)
-
 
     def design_Cylinder(self):
         self.Dialog.show()
         self.Dialog.exec_()
 
 
+
+    #Send Input Parameter to MainWindow
     def sendmsg(self):
-        txt = self.disk.lineEdit.text()
-        self.tableWidget_2.setItem(1, -1, QTableWidgetItem(str(txt)))
+        R = self.disk.lineEdit_3.text()
+        t = self.disk.lineEdit_7.text()
+        L = self.disk.lineEdit_4.text()
+
+        if R.isdigit() and t.isdigit() and L.isdigit():
+            R = float(R)
+            t = float(t)
+            L = float(L)
+            C = cylinder.Cylinder(R, t, L)
+            self.display.EraseAll()
+            self.display.ResetView()
+            self.display.DisplayShape(C.new_thing1, update=True)
+        else:
+            self.Error_dialog.label.setText("Input Error Type!")
+            self.E_Dialog.show()
+            self.E_Dialog.exec_()
+        self.clear_design_dialog()
+
+
+
+    #Clear Design UI after Inputing
+    def clear_design_dialog(self):
+        self.disk.lineEdit_4.setText("")
+        self.disk.lineEdit_7.setText("")
+        self.disk.lineEdit_3.setText("")
+
+
+
