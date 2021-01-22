@@ -17,9 +17,9 @@ from OCC.Core.BRepFilletAPI import BRepFilletAPI_MakeFillet
 class Cylinder():
     def __init__(self, R = 500, t = 30, L = 100):
         # 模型定义
-        self.R = R
-        self.t = t
-        self.L = L
+        self.R = R #壳体内径
+        self.t = t #设计厚度
+        self.L = L #筒体长度
         P1 = gp_Pnt(-self.R, 0, 0)
         P2 = gp_Pnt(0, self.R, 0)
         P3 = gp_Pnt(self.R, 0, 0)

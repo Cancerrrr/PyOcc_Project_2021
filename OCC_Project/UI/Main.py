@@ -26,6 +26,7 @@ class Ui_MainWindow(object):
         self.disk.setupUi(self.Dialog)
         self.disk.buttonBox.accepted.connect(self.sendmsg)
         self.disk.buttonBox.rejected.connect(self.Dialog.rejected)
+        self.cylinder_parameter = {}
 
         #Error Dialog
         self.Error_dialog = Error_Dialog.Ui_Dialog()
@@ -629,11 +630,36 @@ class Ui_MainWindow(object):
 
     #Send Input Parameter to MainWindow
     def sendmsg(self):
-        R = self.disk.lineEdit_3.text()
-        t = self.disk.lineEdit_7.text()
-        L = self.disk.lineEdit_4.text()
+        R = self.disk.lineEdit_3.text() # 壳体内径
+        t = self.disk.lineEdit_7.text() # 设计厚度
+        L = self.disk.lineEdit_4.text() # 筒体长度
+        cylinder_pressure = self.disk.lineEdit.text() #设计压力
+        cylinder_temperature = self.disk.lineEdit_2.text() #设计温度
+        cylinder_corrosion = self.disk.lineEdit_8.text() #腐蚀系数
+        cylinder_welding = self.disk.lineEdit_9.text() #焊接系数
 
-        if R.isdigit() and t.isdigit() and L.isdigit():
+
+
+        if self.is_number(R) and self.is_number(t)\
+                and self.is_number(L)\
+                and self.is_number(cylinder_pressure)\
+                and self.is_number(cylinder_temperature)\
+                and self.is_number(cylinder_corrosion)\
+                and self.is_number(cylinder_welding):
+
+            self.cylinder_parameter = {
+                'pressure': cylinder_pressure,
+                'temperature': cylinder_temperature,
+                'corrosion': cylinder_corrosion,
+                'welding': cylinder_welding,
+                'internal_diameter': R,
+                'thickness': t,
+                'Length': L
+            }
+
+            print('Pressure:' + self.cylinder_parameter['pressure'] +
+                  '\n Temperature:' + self.cylinder_parameter['temperature'])
+
             R = float(R)
             t = float(t)
             L = float(L)
@@ -654,6 +680,13 @@ class Ui_MainWindow(object):
         self.disk.lineEdit_4.setText("")
         self.disk.lineEdit_7.setText("")
         self.disk.lineEdit_3.setText("")
+        self.disk.lineEdit.setText("")
+        self.disk.lineEdit_2.setText("")
+        self.disk.lineEdit_8.setText("")
+        self.disk.lineEdit_9.setText("")
 
-
+    def is_number(self, a):
+        if a.replace('.', '').isdigit():
+            return True
+        return False
 

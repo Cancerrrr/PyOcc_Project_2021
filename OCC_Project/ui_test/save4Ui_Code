@@ -1,9 +1,17 @@
-def __init__(self):
-    self.disk = disk_design_dialog.Ui_Dialog()
-    self.Dialog = QDialog()
-    self.disk.setupUi(self.Dialog)
-    self.disk.buttonBox.accepted.connect(self.sendmsg)
-    self.disk.buttonBox.rejected.connect(self.Dialog.rejected)
+class Ui_MainWindow(object):
+    def __init__(self):
+        #Initialize design UI
+        self.disk = Cylinder_design_dialog.Ui_Dialog()
+        self.Dialog = QDialog()
+        self.disk.setupUi(self.Dialog)
+        self.disk.buttonBox.accepted.connect(self.sendmsg)
+        self.disk.buttonBox.rejected.connect(self.Dialog.rejected)
+        self.cylinder_parameter = {}
+
+        #Error Dialog
+        self.Error_dialog = Error_Dialog.Ui_Dialog()
+        self.E_Dialog = QDialog()
+        self.Error_dialog.setupUi(self.E_Dialog)
 
 
 
@@ -39,33 +47,67 @@ def showElliptical(self):
     self.display.DisplayShape(A.Shape(), update=True)
 
 
-def design_disk(self):
-    disk = disk_design_dialog.Ui_Dialog()
-    Dialog = QDialog()
-    disk.setupUi(Dialog)
-    Dialog.show()
-    Dialog.exec_()
-
-
-def showElliptical(self):
-    Elli = Elliptical.Elliptical_Head()
-    A = Elli.getElliptical_Head()
-    self.display.EraseAll()
-    self.display.ResetView()
-    self.display.DisplayShape(A.Shape(), update=True)
-
-
 def design_Cylinder(self):
     self.Dialog.show()
     self.Dialog.exec_()
 
 
+# Send Input Parameter to MainWindow
 def sendmsg(self):
-    R = float(self.disk.lineEdit_3.text())
-    t = float(self.disk.lineEdit_7.text())
-    L = float(self.disk.lineEdit_4.text())
+    R = self.disk.lineEdit_3.text()  # 壳体内径
+    t = self.disk.lineEdit_7.text()  # 设计厚度
+    L = self.disk.lineEdit_4.text()  # 筒体长度
+    cylinder_pressure = self.disk.lineEdit.text()  # 设计压力
+    cylinder_temperature = self.disk.lineEdit_2.text()  # 设计温度
+    cylinder_corrosion = self.disk.lineEdit_8.text()  # 腐蚀系数
+    cylinder_welding = self.disk.lineEdit_9.text()  # 焊接系数
 
-    C = cylinder.Cylinder(R, t, L)
-    self.display.EraseAll()
-    self.display.ResetView()
-    self.display.DisplayShape(C.new_thing1, update=True)
+    if self.is_number(R) and self.is_number(t) \
+            and self.is_number(L) \
+            and self.is_number(cylinder_pressure) \
+            and self.is_number(cylinder_temperature) \
+            and self.is_number(cylinder_corrosion) \
+            and self.is_number(cylinder_welding):
+
+        self.cylinder_parameter = {
+            'pressure': cylinder_pressure,
+            'temperature': cylinder_temperature,
+            'corrosion': cylinder_corrosion,
+            'welding': cylinder_welding,
+            'internal_diameter': R,
+            'thickness': t,
+            'Length': L
+        }
+
+        print('Pressure:' + self.cylinder_parameter['pressure'] +
+              '\n Temperature:' + self.cylinder_parameter['temperature'])
+
+        R = float(R)
+        t = float(t)
+        L = float(L)
+        C = cylinder.Cylinder(R, t, L)
+        self.display.EraseAll()
+        self.display.ResetView()
+        self.display.DisplayShape(C.new_thing1, update=True)
+    else:
+        self.Error_dialog.label.setText("Input Error Type!")
+        self.E_Dialog.show()
+        self.E_Dialog.exec_()
+    self.clear_design_dialog()
+
+
+# Clear Design UI after Inputing
+def clear_design_dialog(self):
+    self.disk.lineEdit_4.setText("")
+    self.disk.lineEdit_7.setText("")
+    self.disk.lineEdit_3.setText("")
+    self.disk.lineEdit.setText("")
+    self.disk.lineEdit_2.setText("")
+    self.disk.lineEdit_8.setText("")
+    self.disk.lineEdit_9.setText("")
+
+
+def is_number(self, a):
+    if a.replace('.', '').isdigit():
+        return True
+    return False
