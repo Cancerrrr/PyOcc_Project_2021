@@ -16,22 +16,33 @@ from UI import Error_Dialog
 from OCC_Example import Elliptical
 from ui_test.qtDisplay import qtViewer3d
 from OCC_Example import cylinder
-
+from OCC_Example import TongTiKaiKong
+from UI import  TTkaikong
 
 class Ui_MainWindow(object):
     def __init__(self):
-        #Initialize design UI
+        #Initialize design UI(Cylinder)
         self.disk = Cylinder_design_dialog.Ui_Dialog()
-        self.Dialog = QDialog()
-        self.disk.setupUi(self.Dialog)
-        self.disk.buttonBox.accepted.connect(self.sendmsg)
-        self.disk.buttonBox.rejected.connect(self.Dialog.rejected)
+        self.Dialog_cylinder = QDialog()
+        self.disk.setupUi(self.Dialog_cylinder)
+        self.disk.buttonBox.accepted.connect(self.sendmsg_cylinder)
+        self.disk.buttonBox.rejected.connect(self.Dialog_cylinder.rejected)
         self.cylinder_parameter = {}
+
+        #Initialize design UI(筒体开孔)
+        self.TT = TTkaikong.Ui_Dialog()
+        self.Dialog_TTKK = QDialog()
+        self.TT.setupUi(self.Dialog_TTKK)
+        self.TT.buttonBox.accepted.connect(self.sendmsg_TTKT)
+        self.TT.buttonBox.rejected.connect(self.Dialog_TTKK.rejected)
+        self.TTKK_parameter = {}
 
         #Error Dialog
         self.Error_dialog = Error_Dialog.Ui_Dialog()
         self.E_Dialog = QDialog()
         self.Error_dialog.setupUi(self.E_Dialog)
+
+
 
 
     def setupUi(self, MainWindow):
@@ -520,7 +531,7 @@ class Ui_MainWindow(object):
         #setAction
         self.pushButton_4.clicked.connect(self.showElliptical)
         self.pushButton_3.clicked.connect(self.design_Cylinder)
-
+        self.pushButton_7.clicked.connect(self.design_TTkaikong)
 
         self.retranslateUi(MainWindow)
         self.tabWidget.setCurrentIndex(0)
@@ -623,13 +634,17 @@ class Ui_MainWindow(object):
 
 
     def design_Cylinder(self):
-        self.Dialog.show()
-        self.Dialog.exec_()
+        self.Dialog_cylinder.show()
+        self.Dialog_cylinder.exec_()
 
+
+    def design_TTkaikong(self):
+        self.Dialog_TTKK.show()
+        self.Dialog_TTKK.exec_()
 
 
     #Send Input Parameter to MainWindow
-    def sendmsg(self):
+    def sendmsg_cylinder(self):
         R = self.disk.lineEdit_3.text() # 壳体内径
         t = self.disk.lineEdit_7.text() # 设计厚度
         L = self.disk.lineEdit_4.text() # 筒体长度
@@ -637,8 +652,6 @@ class Ui_MainWindow(object):
         cylinder_temperature = self.disk.lineEdit_2.text() #设计温度
         cylinder_corrosion = self.disk.lineEdit_8.text() #腐蚀系数
         cylinder_welding = self.disk.lineEdit_9.text() #焊接系数
-
-
 
         if self.is_number(R) and self.is_number(t)\
                 and self.is_number(L)\
@@ -657,9 +670,6 @@ class Ui_MainWindow(object):
                 'Length': L
             }
 
-            print('Pressure:' + self.cylinder_parameter['pressure'] +
-                  '\n Temperature:' + self.cylinder_parameter['temperature'])
-
             R = float(R)
             t = float(t)
             L = float(L)
@@ -673,6 +683,52 @@ class Ui_MainWindow(object):
             self.E_Dialog.exec_()
         self.clear_design_dialog()
 
+    def sendmsg_TTKT(self):
+        D_i = self.TT.lineEdit.text() # 壳内半径
+        t = self.TT.lineEdit_2.text() # 壳厚度
+        l = self.TT.lineEdit_3.text() # 筒体长度
+        R_n = self.TT.lineEdit_4.text() # 接管内半径
+        L_pr1 = self.TT.lineEdit_5.text() # 容器壁外侧接管伸出长度
+        t_n = self.TT.lineEdit_6.text() # 接管壁厚度
+        t_n2 = self.TT.lineEdit_7.text() # 变厚度接管较薄部分公称厚度
+        t_e = self.TT.lineEdit_8.text() # 补强板厚度
+        L_pr2 = self.TT.lineEdit_9.text() # 容器壁内侧接管伸出长度
+        L_pr3 = self.TT.lineEdit_10.text() # 外侧变厚度t的长度
+
+        if self.is_number(D_i) and self.is_number(t)\
+            and self.is_number(l) and self.is_number(R_n)\
+            and self.is_number(L_pr1) and self.is_number(t_n)\
+            and self.is_number(t_n2) and self.is_number(t_e)\
+            and self.is_number(L_pr2) and self.is_number(L_pr3):
+
+            D_i = float(D_i)
+            t = float(t)
+            l = float(l)
+            R_n = float(R_n)
+            L_pr1 = float(L_pr1)
+            t_n = float(t_n)
+            t_n2 = float(t_n2)
+            t_e = float(t_e)
+            L_pr2 = float(L_pr2)
+            L_pr3 = float(L_pr3)
+            tongtikaikong = TongTiKaiKong.TTKaikong(D_i, t, l, R_n, L_pr1, t_n, t_n2, t_e, L_pr2, L_pr3)
+            self.display.EraseAll()
+            self.display.ResetView()
+            self.display.DisplayShape(tongtikaikong.new_thing0, update=True)
+
+        else:
+            self.Error_dialog.label.setText("Input Error Type!")
+            self.E_Dialog.show()
+            self.E_Dialog.exec_()
+        self.clear_design_dialog()
+
+
+
+
+
+
+
+
 
 
     #Clear Design UI after Inputing
@@ -684,6 +740,17 @@ class Ui_MainWindow(object):
         self.disk.lineEdit_2.setText("")
         self.disk.lineEdit_8.setText("")
         self.disk.lineEdit_9.setText("")
+        self.TT.lineEdit.setText("")
+        self.TT.lineEdit_2.setText("")
+        self.TT.lineEdit_3.setText("")
+        self.TT.lineEdit_4.setText("")
+        self.TT.lineEdit_5.setText("")
+        self.TT.lineEdit_6.setText("")
+        self.TT.lineEdit_7.setText("")
+        self.TT.lineEdit_8.setText("")
+        self.TT.lineEdit_9.setText("")
+        self.TT.lineEdit_10.setText("")
+
 
     def is_number(self, a):
         if a.replace('.', '').isdigit():
