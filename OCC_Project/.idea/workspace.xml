@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="239c5ac4-78d0-4191-b4d6-571959e3bc1d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/OCC_Example/TongTiKaiKong.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UI/TTkaikong.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UI/TTkaikong.ui" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/icons/TTKT.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pdf_spawn/3DViewer.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/Cylinder_design_dialog.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/Cylinder_design_dialog.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/Main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui_test/PDF_Spawn.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui_test/PDF_Spawn.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -184,8 +182,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.Application" />
-        <item itemvalue="Python.TongTiKaiKong" />
         <item itemvalue="Python.PDF_Spawn" />
+        <item itemvalue="Python.TongTiKaiKong" />
         <item itemvalue="Python.msgbox" />
         <item itemvalue="Python.cylinder" />
       </list>
