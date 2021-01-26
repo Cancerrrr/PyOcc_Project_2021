@@ -18,6 +18,8 @@ from ui_test.qtDisplay import qtViewer3d
 from OCC_Example import cylinder
 from OCC_Example import TongTiKaiKong
 from UI import  TTkaikong
+from ui_test import PDF_Spawn_Cylinder
+
 
 class Ui_MainWindow(object):
     def __init__(self):
@@ -532,6 +534,7 @@ class Ui_MainWindow(object):
         self.pushButton_4.clicked.connect(self.showElliptical)
         self.pushButton_3.clicked.connect(self.design_Cylinder)
         self.pushButton_7.clicked.connect(self.design_TTkaikong)
+        self.pushButton_10.clicked.connect(self.spawn_PDF_File_Report)
 
         self.retranslateUi(MainWindow)
         self.tabWidget.setCurrentIndex(0)
@@ -757,3 +760,7 @@ class Ui_MainWindow(object):
             return True
         return False
 
+
+    def spawn_PDF_File_Report(self):
+        pdf_generator = PDF_Spawn_Cylinder.PDFGenerator('Cylinder_Report',self.cylinder_parameter)
+        pdf_generator.genTaskPDF()
