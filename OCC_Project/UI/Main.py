@@ -19,7 +19,7 @@ from OCC_Example import cylinder
 from OCC_Example import TongTiKaiKong
 from UI import  TTkaikong
 from ui_test import PDF_Spawn_Cylinder
-
+from ui_test import PDF_Spawn_TTKT
 
 class Ui_MainWindow(object):
     def __init__(self):
@@ -534,7 +534,10 @@ class Ui_MainWindow(object):
         self.pushButton_4.clicked.connect(self.showElliptical)
         self.pushButton_3.clicked.connect(self.design_Cylinder)
         self.pushButton_7.clicked.connect(self.design_TTkaikong)
-        self.pushButton_10.clicked.connect(self.spawn_PDF_File_Report)
+        self.pushButton_10.clicked.connect(self.spawn_PDF_File_Report_Cylinder)
+        self.pushButton_18.clicked.connect(self.spawn_PDF_File_Report_TTKT)
+
+
 
         self.retranslateUi(MainWindow)
         self.tabWidget.setCurrentIndex(0)
@@ -697,12 +700,49 @@ class Ui_MainWindow(object):
         t_e = self.TT.lineEdit_8.text() # 补强板厚度
         L_pr2 = self.TT.lineEdit_9.text() # 容器壁内侧接管伸出长度
         L_pr3 = self.TT.lineEdit_10.text() # 外侧变厚度t的长度
+        P = self.TT.lineEdit_11.text() # 设计压力
+        T = self.TT.lineEdit_12.text() # 设计温度
+        C_2 = self.TT.lineEdit_13.text() # 壳体腐蚀裕量
+        C_2t = self.TT.lineEdit_14.text() # 接管腐蚀裕量
+        W = self.TT.lineEdit_15.text() # 补强板宽度
+        L_42 = self.TT.lineEdit_16.text() # 补强板焊制容器焊脚长度
+        L_43 = self.TT.lineEdit_17.text() # 内测接管填角焊缝的焊脚长度
+        R_nc = self.TT.lineEdit_18.text() # 容器上沿接管开口方向接管半径
+        E = self.TT.lineEdit_19.text() # 焊接接头系数
+        thita = self.TT.lineEdit_20.text() # 接管轴线与筒体表面法线夹角
 
         if self.is_number(D_i) and self.is_number(t)\
             and self.is_number(l) and self.is_number(R_n)\
             and self.is_number(L_pr1) and self.is_number(t_n)\
             and self.is_number(t_n2) and self.is_number(t_e)\
-            and self.is_number(L_pr2) and self.is_number(L_pr3):
+            and self.is_number(L_pr2) and self.is_number(L_pr3)\
+            and self.is_number(P) and self.is_number(T)\
+            and self.is_number(C_2) and self.is_number(C_2t)\
+            and self.is_number(W) and self.is_number(L_42)\
+            and self.is_number(L_43) and self.is_number(R_nc)\
+            and self.is_number(thita):
+
+            self.TTKK_parameter = {'shell_internal_radius': D_i,
+                                   'shell_thickness': t,
+                                   'cylinder_length': l,
+                                   'pipe_internal_radius': R_n,
+                                   'pipe_out_length': L_pr1,
+                                   'pipe_thickness': t_n,
+                                   'nominal_thickness': t_n2,
+                                   'plate_thickness': t_e,
+                                   'pipe_in_length': L_pr2,
+                                   'out_thickness_length': L_pr3,
+                                   'pressure': P,
+                                   'temperature': T,
+                                   'shell_corrosion': C_2,
+                                   'pipe_corrosion': C_2t,
+                                   'plate_width': W,
+                                   'L_42': L_42,
+                                   'L_43': L_43,
+                                   'R_nc': R_nc,
+                                   'E': E,
+                                   'thita': thita}
+
 
             D_i = float(D_i)
             t = float(t)
@@ -761,6 +801,10 @@ class Ui_MainWindow(object):
         return False
 
 
-    def spawn_PDF_File_Report(self):
-        pdf_generator = PDF_Spawn_Cylinder.PDFGenerator('Cylinder_Report',self.cylinder_parameter)
+    def spawn_PDF_File_Report_Cylinder(self):
+        pdf_generator = PDF_Spawn_Cylinder.PDFGenerator('Cylinder_Report', self.cylinder_parameter)
+        pdf_generator.genTaskPDF()
+
+    def spawn_PDF_File_Report_TTKT(self):
+        pdf_generator = PDF_Spawn_TTKT.PDFGenerator('TTKT_Report', self.TTKK_parameter)
         pdf_generator.genTaskPDF()

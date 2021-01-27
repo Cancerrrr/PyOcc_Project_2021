@@ -82,7 +82,7 @@ class PDFGenerator:
         t_min2 = cylinder_pressure*R/(2*148*cylinder_welding+0.4*cylinder_pressure) # 计算厚度
         P_MAWP2 = 2*148*cylinder_welding*t_e/(R-0.4*t_e) # 最大许用工作压力2
 
-        t_min = min(t_min1, t_min2) # 最终-最小厚度
+        t_min = max(t_min1, t_min2) # 最终-最小厚度
         P_MAWP = min(P_MAWP1, P_MAWP2) # 最终-许用工作压力
 
         P_MAPNC = 148*cylinder_welding*t/(R+0.6*t) # 最大许用工作压力

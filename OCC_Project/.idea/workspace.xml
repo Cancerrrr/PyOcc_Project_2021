@@ -2,13 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="239c5ac4-78d0-4191-b4d6-571959e3bc1d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/icons/TT.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pdf_spawn/Cylinder_Report.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui_test/PDF_Spawn_Cylinder.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UI/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/Main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdf_spawn/3DViewer.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui_test/PDF_Spawn.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui_test/PDF_Spawn_TTKT.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/TTkaikong.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/TTkaikong.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/TTkaikong.ui" beforeDir="false" afterPath="$PROJECT_DIR$/UI/TTkaikong.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdf_spawn/Cylinder_Report.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/pdf_spawn/Cylinder_Report.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui_test/PDF_Spawn_Cylinder.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui_test/PDF_Spawn_Cylinder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui_test/PDF_Spawn_TTKT.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui_test/PDF_Spawn_TTKT.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -185,8 +185,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.Application" />
-        <item itemvalue="Python.PDF_Spawn_Cylinder" />
         <item itemvalue="Python.PDF_Spawn_TTKT" />
+        <item itemvalue="Python.PDF_Spawn_Cylinder" />
         <item itemvalue="Python.PDF_Spawn" />
         <item itemvalue="Python.TongTiKaiKong" />
       </list>
