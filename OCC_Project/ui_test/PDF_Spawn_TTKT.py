@@ -13,13 +13,17 @@ from reportlab.pdfbase.ttfonts import TTFont
 pdfmetrics.registerFont(TTFont('pingbold', 'PingBold.ttf'))
 pdfmetrics.registerFont(TTFont('ping', 'ping.ttf'))
 pdfmetrics.registerFont(TTFont('hv', 'Helvetica.ttf'))
+import tkinter as tk
+from tkinter import  filedialog
 
 # 生成PDF文件
 class PDFGenerator:
-    def __init__(self, filename, TTKT_Parameter={}):
+    def __init__(self, TTKT_Parameter={}):
+        root = tk.Tk() # 通过对话框选择保存路径
+        root.withdraw()
+        Folderpath = filedialog.asksaveasfilename()  # 获得选择好的文件夹
         self.TTKT_Parameter = TTKT_Parameter
-        self.filename = filename
-        self.file_path = 'F:/pycharm_project/PyOcc_Project_2021/OCC_Project/pdf_spawn/'
+        self.file_path = Folderpath
         self.title_style = ParagraphStyle(name="TitleStyle", fontName="pingbold", fontSize=48, alignment=TA_LEFT,)
         self.sub_title_style = ParagraphStyle(name="SubTitleStyle", fontName="hv", fontSize=32,
                                               textColor=colors.HexColor(0x666666), alignment=TA_LEFT, )
@@ -80,7 +84,7 @@ class PDFGenerator:
                                       ('BOTTOMPADDING', (0, 0), (-1, -1), 6),
                                       ('GRID', (0, 0), (-1, -1), 0.5, colors.black),
                                      ])
-
+        #参数计算
         D_i = float(self.TTKT_Parameter['shell_internal_radius'])  # 壳内半径
         t = float(self.TTKT_Parameter['shell_thickness'])  # 壳厚度
         l = float(self.TTKT_Parameter['cylinder_length'])  # 筒体长度
@@ -102,6 +106,7 @@ class PDFGenerator:
         E = float(self.TTKT_Parameter['E']) # 焊接接头系数
         thita = float(self.TTKT_Parameter['thita']) # 接管轴线与筒体表面法线夹角
 
+        # Step 1
         L_R = 0 # 容器壁补强范围
         if t_e == 0:
             L_R = 8*t
@@ -111,7 +116,7 @@ class PDFGenerator:
             L_R = 10*t
         elif t_e >= 0.5*t or W >= 8*(t+t_e):
             L_R = 8*(t+t_e)
-
+        # Step 2
         L_H = min(t+0.78*sqrt(R_n*t_n), min(L_pr1+t, 8*(t+t_e))) # 容器外表面沿接管壁补强范围
         L_I = 0 # 容器内表面沿接管壁补强范围
 
@@ -121,6 +126,7 @@ class PDFGenerator:
             L_T3 = 8*(t+t_e)
             L_I = min(L_T3, min(L_T1, L_T2))
 
+        # Step 3
         A_y = min((R_n+t_n)/sqrt(D_i+t)*t, 10)
         A_1 = t*L_R*max(A_y/4, 1)
         A_2 = 0
@@ -128,48 +134,43 @@ class PDFGenerator:
             A_2 = t_n*L_H
         else:
             A_2 = t_n*(L_pr3+t)+0.78*(t_n2*t_n2/t_n)*sqrt(R_n*t_n2)
-
         A_3 = t_n*L_I
         A_42 = 0.5*L_42*L_42
         A_43 = 0.5*L_43*L_43
         A_5 = min(W*t_e, L_R*t_e)
         A_T = A_1+A_2+A_3+A_42+A_43+A_5 # 靠近接管开孔处的有效总面积
 
+        # Step 4
         R_eff = D_i/2 # 壳体有效半径
 
+        # Step 5
         f_N = P*R_n*(L_H-t) # 内压在容器外侧接管上引起的力
         f_S = P*R_eff*(L_R+t_n) # 内压在壳体上引起的力
         f_Y = P*R_eff*R_nc # 内压引起的不连续力
+
+        # Step 6
         t_eff = 0 # 壳体有效厚度
         if t_e > 0.5*t and W >= 8*(t+t_e):
             t_eff = t+t_e
         else:
             t_eff = t
+
+        # Step 7
         sigma_avg = (f_N+f_S+f_Y)/A_T # 平均局部一次薄膜应力
         sigma_eire = P*R_eff/t_eff # 总体一次薄膜应力
-        P_L = max(2*sigma_avg-sigma_eire, sigma_eire) # 接管相交处最大局部一次薄膜应力
 
+        # Step 8
+        P_L = max(2*sigma_avg-sigma_eire, sigma_eire) # 接管相交处最大局部一次薄膜应力
         R_ne = R_n/math.sin(thita)
         A_P = R_n*(L_H-t)+R_eff*(L_R+t_n+R_ne)
         P_MAX = min(1.5*140*E/(2*A_P/A_T-R_eff/t_eff), 140*t/R_eff) # 接管最大许用工作压力
 
-
-
-
+        # 校核
         check_P_L = ''
-
         if P_L < 1.5*140*E:
             check_P_L = '合格'
         else:
             check_P_L = '不合格'
-
-
-
-
-
-
-
-
 
         img = Image('./icons/TTKT.png')
         img.drawWidth = 4 * inch
@@ -215,25 +216,11 @@ class PDFGenerator:
         body_style.wordWrap = 'CJK'
         body_style.fontName = 'ping'
         body_style.fontSize = 12
-
-
-
         # 基础参数
-        #story.append(Paragraph("基础参数", self.sub_table_style))
-        basic_table = Table(self.basic_data, colWidths=None , rowHeights=None, style=self.basic_style)
+        basic_table = Table(self.basic_data, colWidths=None, rowHeights=None, style=self.basic_style)
         story.append(basic_table)
-        #story.append(Spacer(1, 10 * mm))
-
-
-
-        #doc = SimpleDocTemplate(self.file_path + self.filename + ".pdf",
-                                #leftMargin=20 * mm, rightMargin=20 * mm, topMargin=20 * mm, bottomMargin=20 * mm)
-        doc = SimpleDocTemplate(self.file_path + self.filename + ".pdf", leftSpace=37 * mm, rightMargin=15 * mm, pagesize = A4)
+        doc = SimpleDocTemplate(self.file_path + ".pdf", leftSpace=37 * mm, rightMargin=15 * mm, pagesize = A4)
         doc.build(story)
-
-
-
-
 
 '''if __name__ == '__main__':
     parameter = {'shell_internal_radius': 1000,
@@ -256,7 +243,5 @@ class PDFGenerator:
                                    'R_nc': 20,
                                    'E': 1,
                                    'thita': 30}
-    pdf_generator = PDFGenerator('TTKT.pdf', parameter)
-
-
+    pdf_generator = PDFGenerator(parameter)
     pdf_generator.genTaskPDF()'''

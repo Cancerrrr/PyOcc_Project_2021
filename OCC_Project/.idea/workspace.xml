@@ -4,11 +4,10 @@
     <list default="true" id="239c5ac4-78d0-4191-b4d6-571959e3bc1d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UI/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/Main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/TTkaikong.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/TTkaikong.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/TTkaikong.ui" beforeDir="false" afterPath="$PROJECT_DIR$/UI/TTkaikong.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdf_spawn/Cylinder_Report.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/pdf_spawn/Cylinder_Report.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdf_spawn/Cylinder_Report.pdf" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ui_test/PDF_Spawn_Cylinder.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui_test/PDF_Spawn_Cylinder.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ui_test/PDF_Spawn_TTKT.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui_test/PDF_Spawn_TTKT.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui_test/save4Ui_Code" beforeDir="false" afterPath="$PROJECT_DIR$/ui_test/save4Ui_Code" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -55,7 +54,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Application">
+  <component name="RunManager" selected="Python.PDF_Spawn_TTKT">
     <configuration name="Application" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="OCC_Project" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -184,8 +183,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Application" />
         <item itemvalue="Python.PDF_Spawn_TTKT" />
+        <item itemvalue="Python.Application" />
         <item itemvalue="Python.PDF_Spawn_Cylinder" />
         <item itemvalue="Python.PDF_Spawn" />
         <item itemvalue="Python.TongTiKaiKong" />

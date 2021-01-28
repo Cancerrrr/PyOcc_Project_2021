@@ -7,16 +7,20 @@ from reportlab.lib import colors
 from reportlab.lib.enums import TA_CENTER, TA_LEFT
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
+import tkinter as tk
+from tkinter import  filedialog
 pdfmetrics.registerFont(TTFont('pingbold', 'PingBold.ttf'))
 pdfmetrics.registerFont(TTFont('ping', 'ping.ttf'))
 pdfmetrics.registerFont(TTFont('hv', 'Helvetica.ttf'))
 
 # 生成PDF文件
 class PDFGenerator:
-    def __init__(self, filename, cylinder_parameter={}):
+    def __init__(self, cylinder_parameter={}):
+        root = tk.Tk()
+        root.withdraw()
+        Folderpath = filedialog.asksaveasfilename()  # 获得选择好的文件夹
         self.cylinder_parameter = cylinder_parameter
-        self.filename = filename
-        self.file_path = 'F:/pycharm_project/PyOcc_Project_2021/OCC_Project/pdf_spawn/'
+        self.file_path = Folderpath
         self.title_style = ParagraphStyle(name="TitleStyle", fontName="pingbold", fontSize=48, alignment=TA_LEFT,)
         self.sub_title_style = ParagraphStyle(name="SubTitleStyle", fontName="hv", fontSize=32,
                                               textColor=colors.HexColor(0x666666), alignment=TA_LEFT, )
@@ -67,6 +71,7 @@ class PDFGenerator:
         img = Image('./icons/TT.png')
         img.drawWidth = 2 * inch
         img.drawHeight = 1.5 * inch
+        # 参数计算
         R = float(self.cylinder_parameter['internal_diameter'])  # 壳体内径
         t = float(self.cylinder_parameter['thickness']) # 设计厚度
         L = float(self.cylinder_parameter['Length'])  # 筒体长度
@@ -87,25 +92,18 @@ class PDFGenerator:
 
         P_MAPNC = 148*cylinder_welding*t/(R+0.6*t) # 最大许用工作压力
         P_Sact = (cylinder_pressure*(R+0.6*t_e))/(cylinder_welding*t_e) # 最大许用应力计算
-
-
-
-
         check1 = ''
         check2 = ''
-
         if t >= t_min and t_min > 0:
             check1 = '合格'
         else:
             check1 = '不合格'
-
-
         if P_MAWP >= cylinder_pressure and 140*cylinder_welding >= P_Sact:
             check2 = '合格'
         else:
             check2 = '不合格'
 
-
+        # 表格格式生成
         self.basic_data = [['内压圆筒校核', '计算单位', '压力容器专用计算软件', ''],
                       ['计算标准', 'ASME VIII-1', '', ''],
                       ['计算条件', '', '简图', ''],
@@ -131,34 +129,18 @@ class PDFGenerator:
                       ['校核条件', 'StE>=P_Sact P_MAWP>= P', '', ''],
                       ['结论', check2, '', ''], ]
 
-
-
-
-
     def genTaskPDF(self):
         story = []
-
-
         # 表格允许单元格内容自动换行格式设置
         stylesheet = getSampleStyleSheet()
         body_style = stylesheet["BodyText"]
         body_style.wordWrap = 'CJK'
         body_style.fontName = 'ping'
         body_style.fontSize = 12
-
-
-
         # 基础参数
-        #story.append(Paragraph("基础参数", self.sub_table_style))
         basic_table = Table(self.basic_data, colWidths=None , rowHeights=None, style=self.basic_style)
         story.append(basic_table)
-        #story.append(Spacer(1, 10 * mm))
-
-
-
-        #doc = SimpleDocTemplate(self.file_path + self.filename + ".pdf",
-                                #leftMargin=20 * mm, rightMargin=20 * mm, topMargin=20 * mm, bottomMargin=20 * mm)
-        doc = SimpleDocTemplate(self.file_path + self.filename + ".pdf", leftSpace=37 * mm, rightMargin=15 * mm, pagesize = A4)
+        doc = SimpleDocTemplate(self.file_path + ".pdf", leftSpace=37 * mm, rightMargin=15 * mm, pagesize = A4)
         doc.build(story)
 
 '''if __name__ == '__main__':
@@ -170,5 +152,6 @@ class PDFGenerator:
                 'thickness': '55',
                 'Length': '500'}
 
+    cylinder_parameter = {}
     pdf_generator = PDFGenerator('Cylinder_Report', cylinder_parameter)
     pdf_generator.genTaskPDF()'''

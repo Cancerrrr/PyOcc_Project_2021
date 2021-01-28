@@ -21,6 +21,7 @@ from UI import  TTkaikong
 from ui_test import PDF_Spawn_Cylinder
 from ui_test import PDF_Spawn_TTKT
 
+
 class Ui_MainWindow(object):
     def __init__(self):
         #Initialize design UI(Cylinder)
@@ -43,9 +44,6 @@ class Ui_MainWindow(object):
         self.Error_dialog = Error_Dialog.Ui_Dialog()
         self.E_Dialog = QDialog()
         self.Error_dialog.setupUi(self.E_Dialog)
-
-
-
 
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
@@ -513,7 +511,6 @@ class Ui_MainWindow(object):
         MainWindow.setStatusBar(self.statusbar)
         self.menubar.addAction(self.menuFile.menuAction())
         self.menubar.addAction(self.menuOutput.menuAction())
-
         MainWindow.canva = qtViewer3d(self.centralwidget)
         MainWindow.canva.resize(735, 550)
         MainWindow.canva.move(330, 140)
@@ -521,12 +518,9 @@ class Ui_MainWindow(object):
 
         # 显示设置
         MainWindow.canva.InitDriver()  # canva的驱动,设置驱动后，才能成功display
-
         self.display = MainWindow.canva._display
-
         rgb_list1 = [206, 215, 222]
         rgb_list2 = [128, 128, 128]
-
         self.display.set_bg_gradient_color(rgb_list1, rgb_list2)  # 设置背景渐变色
         self.display.display_triedron()  # display black trihedron
 
@@ -538,14 +532,11 @@ class Ui_MainWindow(object):
         self.pushButton_18.clicked.connect(self.spawn_PDF_File_Report_TTKT)
 
 
-
         self.retranslateUi(MainWindow)
         self.tabWidget.setCurrentIndex(0)
         self.tabWidget_2.setCurrentIndex(0)
         self.toolBox_2.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
-
-
 
 
     def retranslateUi(self, MainWindow):
@@ -631,6 +622,7 @@ class Ui_MainWindow(object):
         self.menuFile.setTitle(_translate("MainWindow", "File"))
         self.menuOutput.setTitle(_translate("MainWindow", "Output"))
 
+    # show Elliptical model
     def showElliptical(self):
         Elli = Elliptical.Elliptical_Head()
         A = Elli.getElliptical_Head()
@@ -638,12 +630,12 @@ class Ui_MainWindow(object):
         self.display.ResetView()
         self.display.DisplayShape(A.Shape(), update=True)
 
-
+    # show cylinder design UI and input parameter to paint model
     def design_Cylinder(self):
         self.Dialog_cylinder.show()
         self.Dialog_cylinder.exec_()
 
-
+    # show TTKT design UI and input parameter to paint model
     def design_TTkaikong(self):
         self.Dialog_TTKK.show()
         self.Dialog_TTKK.exec_()
@@ -689,6 +681,7 @@ class Ui_MainWindow(object):
             self.E_Dialog.exec_()
         self.clear_design_dialog()
 
+    # Send Input Parameter to MainWindow
     def sendmsg_TTKT(self):
         D_i = self.TT.lineEdit.text() # 壳内半径
         t = self.TT.lineEdit_2.text() # 壳厚度
@@ -765,15 +758,6 @@ class Ui_MainWindow(object):
             self.E_Dialog.exec_()
         self.clear_design_dialog()
 
-
-
-
-
-
-
-
-
-
     #Clear Design UI after Inputing
     def clear_design_dialog(self):
         self.disk.lineEdit_4.setText("")
@@ -794,17 +778,28 @@ class Ui_MainWindow(object):
         self.TT.lineEdit_9.setText("")
         self.TT.lineEdit_10.setText("")
 
-
+    #judge a input whether is a number
     def is_number(self, a):
         if a.replace('.', '').isdigit():
             return True
         return False
 
-
+    # spawn cylinder report
     def spawn_PDF_File_Report_Cylinder(self):
-        pdf_generator = PDF_Spawn_Cylinder.PDFGenerator('Cylinder_Report', self.cylinder_parameter)
-        pdf_generator.genTaskPDF()
+        if self.cylinder_parameter != {}:
+            pdf_generator = PDF_Spawn_Cylinder.PDFGenerator(self.cylinder_parameter)
+            pdf_generator.genTaskPDF()
+        else:
+            self.Error_dialog.label.setText("There is no input!")
+            self.E_Dialog.show()
+            self.E_Dialog.exec_()
 
+    # spawn TTKT report
     def spawn_PDF_File_Report_TTKT(self):
-        pdf_generator = PDF_Spawn_TTKT.PDFGenerator('TTKT_Report', self.TTKK_parameter)
-        pdf_generator.genTaskPDF()
+        if self.TTKK_parameter != {}:
+            pdf_generator = PDF_Spawn_TTKT.PDFGenerator(self.TTKK_parameter)
+            pdf_generator.genTaskPDF()
+        else:
+            self.Error_dialog.label.setText("There is no input!")
+            self.E_Dialog.show()
+            self.E_Dialog.exec_()
