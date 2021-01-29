@@ -3,10 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="239c5ac4-78d0-4191-b4d6-571959e3bc1d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OCC_Example/TongTiKaiKong.py" beforeDir="false" afterPath="$PROJECT_DIR$/OCC_Example/TongTiKaiKong.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OCC_Example/cylinder.py" beforeDir="false" afterPath="$PROJECT_DIR$/OCC_Example/cylinder.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UI/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/Main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdf_spawn/Cylinder_Report.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui_test/PDF_Spawn_Cylinder.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui_test/PDF_Spawn_Cylinder.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui_test/PDF_Spawn_TTKT.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui_test/PDF_Spawn_TTKT.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui_test/PDF_Spawn_Cylinder.py" beforeDir="false" afterPath="$PROJECT_DIR$/pdf_spawn/PDF_Spawn_Cylinder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui_test/PDF_Spawn_TTKT.py" beforeDir="false" afterPath="$PROJECT_DIR$/pdf_spawn/PDF_Spawn_TTKT.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui_test/mainwindow.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui_test/mainwindow.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui_test/qtDisplay.py" beforeDir="false" afterPath="$PROJECT_DIR$/pythonocc_canvas/qtDisplay.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ui_test/save4Ui_Code" beforeDir="false" afterPath="$PROJECT_DIR$/ui_test/save4Ui_Code" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,6 +41,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\pycharm_project\PyOcc_Project_2021\OCC_Project\pythonocc_canvas" />
+      <recent name="F:\pycharm_project\PyOcc_Project_2021\OCC_Project\pdf_spawn" />
       <recent name="F:\pycharm_project\PyOcc_Project_2021\OCC_Project\OCC_Example" />
       <recent name="F:\pycharm_project\OCC_Project\UI" />
     </key>
@@ -54,7 +59,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.PDF_Spawn_TTKT">
+  <component name="RunManager" selected="Python.Application">
     <configuration name="Application" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="OCC_Project" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -76,27 +81,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="PDF_Spawn" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="OCC_Project" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="F:\pycharm_project\PyOcc_Project_2021\OCC_Project\ui_test\PDF_Spawn_TTKT.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="PDF_Spawn_Cylinder" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="OCC_Project" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -109,7 +93,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ui_test/PDF_Spawn_Cylinder.py" />
+      <option name="SCRIPT_NAME" value="F:\pycharm_project\PyOcc_Project_2021\OCC_Project\pdf_spawn\PDF_Spawn_Cylinder.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -130,7 +114,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ui_test/PDF_Spawn_TTKT.py" />
+      <option name="SCRIPT_NAME" value="F:\pycharm_project\PyOcc_Project_2021\OCC_Project\pdf_spawn\PDF_Spawn_TTKT.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -181,13 +165,34 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="cylinder" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="OCC_Project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/OCC_Example/cylinder.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.PDF_Spawn_TTKT" />
         <item itemvalue="Python.Application" />
-        <item itemvalue="Python.PDF_Spawn_Cylinder" />
-        <item itemvalue="Python.PDF_Spawn" />
+        <item itemvalue="Python.cylinder" />
         <item itemvalue="Python.TongTiKaiKong" />
+        <item itemvalue="Python.PDF_Spawn_TTKT" />
+        <item itemvalue="Python.PDF_Spawn_Cylinder" />
       </list>
     </recent_temporary>
   </component>

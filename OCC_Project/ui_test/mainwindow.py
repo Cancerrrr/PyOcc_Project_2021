@@ -1,13 +1,12 @@
 import sys
 from OCC.Core.gp import gp_Pnt
-from OCC.Extend.DataExchange import read_iges_file
 from PyQt5.QtGui import QIcon
 
 from PyQt5 import QtCore
-from PyQt5.QtWidgets import QFileDialog, QAction, QApplication, QMenu, QMainWindow, QHBoxLayout, QDockWidget, \
-    QListWidget, QLabel, qApp
+from PyQt5.QtWidgets import QFileDialog, QAction, QApplication, QMainWindow, QHBoxLayout, QDockWidget, \
+    QListWidget, QLabel
 
-from ui_test.qtDisplay import qtViewer3d
+from pythonocc_canvas.qtDisplay import qtViewer3d
 
 
 class MainWindow(QMainWindow):

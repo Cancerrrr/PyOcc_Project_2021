@@ -9,17 +9,16 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-from PyQt5.QtWidgets import QDialog, QTableWidget, QTableWidgetItem, QMessageBox
+from PyQt5.QtWidgets import QDialog
 
 from UI import Cylinder_design_dialog
 from UI import Error_Dialog
 from OCC_Example import Elliptical
-from ui_test.qtDisplay import qtViewer3d
+from pythonocc_canvas.qtDisplay import qtViewer3d
 from OCC_Example import cylinder
 from OCC_Example import TongTiKaiKong
 from UI import TTkaikong
-from ui_test import PDF_Spawn_Cylinder
-from ui_test import PDF_Spawn_TTKT
+from pdf_spawn import PDF_Spawn_Cylinder, PDF_Spawn_TTKT
 
 
 class Ui_MainWindow(object):

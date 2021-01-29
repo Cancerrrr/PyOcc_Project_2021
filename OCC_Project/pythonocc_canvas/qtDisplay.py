@@ -118,6 +118,7 @@ class qtViewer3d(qtBaseViewer):
         self._display.display_triedron()
         self._display.SetModeShaded()
         self._display.DisableAntiAliasing()
+
         self._inited = True
         # dict mapping keys to functions
         self._SetupKeyMap()

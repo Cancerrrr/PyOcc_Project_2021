@@ -9,17 +9,16 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-from PyQt5.QtWidgets import QDialog, QTableWidget, QTableWidgetItem, QMessageBox
+from PyQt5.QtWidgets import QDialog
 
 from UI import Cylinder_design_dialog
 from UI import Error_Dialog
 from OCC_Example import Elliptical
-from ui_test.qtDisplay import qtViewer3d
+from pythonocc_canvas.qtDisplay import qtViewer3d
 from OCC_Example import cylinder
 from OCC_Example import TongTiKaiKong
 from UI import  TTkaikong
-from ui_test import PDF_Spawn_Cylinder
-from ui_test import PDF_Spawn_TTKT
+from pdf_spawn import PDF_Spawn_Cylinder, PDF_Spawn_TTKT
 
 
 class Ui_MainWindow(object):
@@ -49,6 +48,7 @@ class Ui_MainWindow(object):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(1067, 711)
         MainWindow.setMaximumSize(QtCore.QSize(16777215, 16777215))
+        MainWindow.setFixedSize(MainWindow.width(), MainWindow.height())
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setEnabled(True)
         self.centralwidget.setObjectName("centralwidget")
@@ -511,10 +511,15 @@ class Ui_MainWindow(object):
         MainWindow.setStatusBar(self.statusbar)
         self.menubar.addAction(self.menuFile.menuAction())
         self.menubar.addAction(self.menuOutput.menuAction())
+
+
+        # python occ UI show
         MainWindow.canva = qtViewer3d(self.centralwidget)
+
+        MainWindow.canva.setMaximumSize(10000, 10000)
         MainWindow.canva.resize(735, 550)
         MainWindow.canva.move(330, 140)
-        MainWindow.canva.setSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        #MainWindow.canva.setSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
 
         # 显示设置
         MainWindow.canva.InitDriver()  # canva的驱动,设置驱动后，才能成功display
@@ -524,7 +529,7 @@ class Ui_MainWindow(object):
         self.display.set_bg_gradient_color(rgb_list1, rgb_list2)  # 设置背景渐变色
         self.display.display_triedron()  # display black trihedron
 
-        #setAction
+        # setAction
         self.pushButton_4.clicked.connect(self.showElliptical)
         self.pushButton_3.clicked.connect(self.design_Cylinder)
         self.pushButton_7.clicked.connect(self.design_TTkaikong)
@@ -674,6 +679,8 @@ class Ui_MainWindow(object):
             C = cylinder.Cylinder(R, t, L)
             self.display.EraseAll()
             self.display.ResetView()
+            C.start()
+            C.join()
             self.display.DisplayShape(C.new_thing1, update=True)
         else:
             self.Error_dialog.label.setText("Input Error Type!")
@@ -750,6 +757,8 @@ class Ui_MainWindow(object):
             tongtikaikong = TongTiKaiKong.TTKaikong(D_i, t, l, R_n, L_pr1, t_n, t_n2, t_e, L_pr2, L_pr3)
             self.display.EraseAll()
             self.display.ResetView()
+            tongtikaikong.start()
+            tongtikaikong.join()
             self.display.DisplayShape(tongtikaikong.new_thing0, update=True)
 
         else:

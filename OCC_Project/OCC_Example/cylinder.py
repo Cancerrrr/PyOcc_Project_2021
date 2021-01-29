@@ -10,16 +10,23 @@ from OCC.Core.GC import GC_MakeArcOfCircle, GC_MakeSegment
 from OCC.Core.BRepBuilderAPI import BRepBuilderAPI_MakeEdge, BRepBuilderAPI_MakeWire, BRepBuilderAPI_Transform, BRepBuilderAPI_MakeFace
 from OCC.Core.BRepPrimAPI import BRepPrimAPI_MakePrism, BRepPrimAPI_MakeCylinder, BRepPrimAPI_MakeRevol,     BRepPrimAPI_MakeBox
 from OCC.Core.BRepFilletAPI import BRepFilletAPI_MakeFillet
-
+import threading
 
 # In[2]:
 
-class Cylinder():
+class Cylinder(threading.Thread):
     def __init__(self, R = 500, t = 30, L = 100):
+        threading.Thread.__init__(self)
         # 模型定义
         self.R = R #壳体内径
         self.t = t #设计厚度
         self.L = L #筒体长度
+
+        self.new_thing1 = ''
+
+        # In[7]:
+
+    def run(self) -> None:
         P1 = gp_Pnt(-self.R, 0, 0)
         P2 = gp_Pnt(0, self.R, 0)
         P3 = gp_Pnt(self.R, 0, 0)
@@ -35,7 +42,6 @@ class Cylinder():
         Circle2 = GC_MakeArcOfCircle(P4, P5, P6)
         Circle3 = GC_MakeArcOfCircle(P4, P7, P6)
         Circle4 = GC_MakeArcOfCircle(P3, P8, P1)
-
 
         # In[4]:
         ##定义拓扑信息
@@ -55,11 +61,8 @@ class Cylinder():
 
         my_cylinder = S2.Shape()
         my_box = S1.Shape()
+
         self.new_thing1 = BRepAlgoAPI_Cut(my_box, my_cylinder).Shape()
-
-        # In[7]:
-
-
 
 
 
@@ -69,7 +72,9 @@ class Cylinder():
     from OCC.Display.SimpleGui import init_display
     display, start_display, add_menu, add_function_to_menu = init_display()
 
-    C = Cylinder(500,100,1000)
+    C = Cylinder(500, 100, 1000)
+    C.start()
+    C.join()
 
     #display.DisplayShape(W2.Shape(), update=True)
     #display.DisplayShape(S1.Shape(), update=True)
