@@ -21,9 +21,7 @@ class Cylinder(threading.Thread):
         self.R = R #壳体内径
         self.t = t #设计厚度
         self.L = L #筒体长度
-
         self.new_thing1 = ''
-
         # In[7]:
 
     def run(self) -> None:
@@ -37,7 +35,6 @@ class Cylinder(threading.Thread):
         P8 = gp_Pnt(0, -self.R, 0)
 
         # In[3]:
-
         Circle1 = GC_MakeArcOfCircle(P1, P2, P3)
         Circle2 = GC_MakeArcOfCircle(P4, P5, P6)
         Circle3 = GC_MakeArcOfCircle(P4, P7, P6)
@@ -51,22 +48,15 @@ class Cylinder(threading.Thread):
         aEdge6 = BRepBuilderAPI_MakeEdge(Circle4.Value())
 
         # In[5]:
-
         W1 = BRepBuilderAPI_MakeWire(aEdge3.Edge(), aEdge6.Edge())
         W2 = BRepBuilderAPI_MakeWire(aEdge4.Edge(), aEdge5.Edge())
         S1 = BRepPrimAPI_MakePrism(BRepBuilderAPI_MakeFace(W1.Wire()).Face(), gp_Vec(0., 0, self.L))
         S2 = BRepPrimAPI_MakePrism(BRepBuilderAPI_MakeFace(W2.Wire()).Face(), gp_Vec(0., 0, self.L))
 
         # In[6]:
-
         my_cylinder = S2.Shape()
         my_box = S1.Shape()
-
         self.new_thing1 = BRepAlgoAPI_Cut(my_box, my_cylinder).Shape()
-
-
-
-
 
 '''if __name__ == "__main__":
     from OCC.Display.SimpleGui import init_display

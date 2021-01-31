@@ -9,7 +9,6 @@ import  threading
 from OCC.Display.SimpleGui import init_display
 #display, start_display, add_menu, add_function_to_menu = init_display()
 
-
 class TTKaikong(threading.Thread):
     def __init__(self, D_i = 1000, t = 35, l = 2000, R_n = 100, L_pr1 = 50, t_n = 50, t_n2 = 0, t_e = 0, L_pr2 = 0, L_pr3 = 0, Hole_pos = 1000):
         threading.Thread.__init__(self)
@@ -31,7 +30,6 @@ class TTKaikong(threading.Thread):
 
         # 开孔位置
         self.Hole_pos = Hole_pos
-
         self.new_thing0 = ''
 
     def run(self) -> None:

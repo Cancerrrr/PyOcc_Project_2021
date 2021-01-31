@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>494</width>
-    <height>367</height>
+    <height>302</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,7 +17,16 @@
    <item row="0" column="0">
     <layout class="QGridLayout" name="gridLayout" rowstretch="1,0,0,0" columnstretch="0,0,0,0,0">
      <item row="0" column="2">
-      <widget class="QLineEdit" name="lineEdit"/>
+      <widget class="QLineEdit" name="lineEdit">
+       <property name="styleSheet">
+        <string notr="true">QLineEdit{
+        border:1px solid gray;
+        width:150px;
+        border-radius:10px;
+        padding:2px 4px;
+}</string>
+       </property>
+      </widget>
      </item>
      <item row="2" column="1">
       <widget class="QLabel" name="label_7">
@@ -37,7 +46,16 @@
       <widget class="QComboBox" name="comboBox"/>
      </item>
      <item row="2" column="4">
-      <widget class="QLineEdit" name="lineEdit_8"/>
+      <widget class="QLineEdit" name="lineEdit_8">
+       <property name="styleSheet">
+        <string notr="true">QLineEdit{
+        border:1px solid gray;
+        width:150px;
+        border-radius:10px;
+        padding:2px 4px;
+}</string>
+       </property>
+      </widget>
      </item>
      <item row="0" column="1">
       <widget class="QLabel" name="label">
@@ -54,7 +72,16 @@
       </widget>
      </item>
      <item row="2" column="2">
-      <widget class="QLineEdit" name="lineEdit_7"/>
+      <widget class="QLineEdit" name="lineEdit_7">
+       <property name="styleSheet">
+        <string notr="true">QLineEdit{
+        border:1px solid gray;
+        width:150px;
+        border-radius:10px;
+        padding:2px 4px;
+}</string>
+       </property>
+      </widget>
      </item>
      <item row="3" column="3">
       <widget class="QLabel" name="label_10">
@@ -64,7 +91,16 @@
       </widget>
      </item>
      <item row="0" column="4">
-      <widget class="QLineEdit" name="lineEdit_2"/>
+      <widget class="QLineEdit" name="lineEdit_2">
+       <property name="styleSheet">
+        <string notr="true">QLineEdit{
+        border:1px solid gray;
+        width:150px;
+        border-radius:10px;
+        padding:2px 4px;
+}</string>
+       </property>
+      </widget>
      </item>
      <item row="2" column="3">
       <widget class="QLabel" name="label_8">
@@ -74,7 +110,16 @@
       </widget>
      </item>
      <item row="3" column="2">
-      <widget class="QLineEdit" name="lineEdit_9"/>
+      <widget class="QLineEdit" name="lineEdit_9">
+       <property name="styleSheet">
+        <string notr="true">QLineEdit{
+        border:1px solid gray;
+        width:150px;
+        border-radius:10px;
+        padding:2px 4px;
+}</string>
+       </property>
+      </widget>
      </item>
      <item row="1" column="1">
       <widget class="QLabel" name="label_3">
@@ -84,7 +129,16 @@
       </widget>
      </item>
      <item row="1" column="2">
-      <widget class="QLineEdit" name="lineEdit_3"/>
+      <widget class="QLineEdit" name="lineEdit_3">
+       <property name="styleSheet">
+        <string notr="true">QLineEdit{
+        border:1px solid gray;
+        width:150px;
+        border-radius:10px;
+        padding:2px 4px;
+}</string>
+       </property>
+      </widget>
      </item>
      <item row="1" column="3">
       <widget class="QLabel" name="label_4">
@@ -94,7 +148,16 @@
       </widget>
      </item>
      <item row="1" column="4">
-      <widget class="QLineEdit" name="lineEdit_4"/>
+      <widget class="QLineEdit" name="lineEdit_4">
+       <property name="styleSheet">
+        <string notr="true">QLineEdit{
+        border:1px solid gray;
+        width:150px;
+        border-radius:10px;
+        padding:2px 4px;
+}</string>
+       </property>
+      </widget>
      </item>
     </layout>
    </item>

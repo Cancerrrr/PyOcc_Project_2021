@@ -29,7 +29,7 @@ class Ui_MainWindow(object):
         self.disk.setupUi(self.Dialog_cylinder)
         self.disk.buttonBox.accepted.connect(self.sendmsg_cylinder)
         self.disk.buttonBox.rejected.connect(self.Dialog_cylinder.rejected)
-        self.cylinder_parameter = {}
+        self.parameter = {} # 模型参数
 
         #Initialize design UI(筒体开孔)
         self.TT = TTkaikong.Ui_Dialog()
@@ -37,12 +37,17 @@ class Ui_MainWindow(object):
         self.TT.setupUi(self.Dialog_TTKK)
         self.TT.buttonBox.accepted.connect(self.sendmsg_TTKT)
         self.TT.buttonBox.rejected.connect(self.Dialog_TTKK.rejected)
-        self.TTKK_parameter = {}
+        #self.TTKK_parameter = {}
 
         #Error Dialog
         self.Error_dialog = Error_Dialog.Ui_Dialog()
         self.E_Dialog = QDialog()
         self.Error_dialog.setupUi(self.E_Dialog)
+
+
+        # Model Mark
+        self.mark = ''
+
 
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
@@ -76,12 +81,13 @@ class Ui_MainWindow(object):
         self.label_13.setObjectName("label_13")
         self.gridLayout.addWidget(self.label_13, 1, 0, 1, 1)
         self.pushButton = QtWidgets.QPushButton(self.gridLayoutWidget)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.pushButton.sizePolicy().hasHeightForWidth())
         self.pushButton.setSizePolicy(sizePolicy)
         self.pushButton.setText("")
+        self.pushButton.setStyleSheet('''QPushButton{background:#F7D674;border-radius:5px;}QPushButton:hover{background:yellow;}''')
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap("./icons/3/openicon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton.setIcon(icon)
@@ -100,6 +106,7 @@ class Ui_MainWindow(object):
         self.pushButton_17.setIcon(icon1)
         self.pushButton_17.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_17.setObjectName("pushButton_17")
+        self.pushButton_17.setStyleSheet('''QPushButton{background:#F76677;border-radius:5px;}QPushButton:hover{background:red;}''')
         self.gridLayout.addWidget(self.pushButton_17, 0, 0, 1, 1)
         self.pushButton_2 = QtWidgets.QPushButton(self.gridLayoutWidget)
         self.pushButton_2.setText("")
@@ -108,6 +115,7 @@ class Ui_MainWindow(object):
         self.pushButton_2.setIcon(icon2)
         self.pushButton_2.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_2.setObjectName("pushButton_2")
+        self.pushButton_2.setStyleSheet('''QPushButton{background:#6DDF6D;border-radius:5px;}QPushButton:hover{background:green;}''')
         self.gridLayout.addWidget(self.pushButton_2, 0, 2, 1, 1)
         self.label_3 = QtWidgets.QLabel(self.tab)
         self.label_3.setGeometry(QtCore.QRect(70, 80, 54, 12))
@@ -130,6 +138,7 @@ class Ui_MainWindow(object):
         self.pushButton_11.setIcon(icon3)
         self.pushButton_11.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_11.setObjectName("pushButton_11")
+        self.pushButton_11.setStyleSheet('''QPushButton{background:#FFF0F5;border-radius:5px;}QPushButton:hover{background:green;}''')
         self.gridLayout_2.addWidget(self.pushButton_11, 0, 3, 1, 1)
         self.pushButton_12 = QtWidgets.QPushButton(self.gridLayoutWidget_2)
         self.pushButton_12.setText("")
@@ -138,6 +147,7 @@ class Ui_MainWindow(object):
         self.pushButton_12.setIcon(icon4)
         self.pushButton_12.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_12.setObjectName("pushButton_12")
+        self.pushButton_12.setStyleSheet('''QPushButton{background:#FFF0F5;border-radius:5px;}QPushButton:hover{background:green;}''')
         self.gridLayout_2.addWidget(self.pushButton_12, 1, 3, 1, 1)
         self.pushButton_3 = QtWidgets.QPushButton(self.gridLayoutWidget_2)
         self.pushButton_3.setText("")
@@ -146,6 +156,7 @@ class Ui_MainWindow(object):
         self.pushButton_3.setIcon(icon5)
         self.pushButton_3.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_3.setObjectName("pushButton_3")
+        self.pushButton_3.setStyleSheet('''QPushButton{background:#FFF0F5;border-radius:5px;}QPushButton:hover{background:green;}''')
         self.gridLayout_2.addWidget(self.pushButton_3, 0, 0, 1, 1)
         self.pushButton_4 = QtWidgets.QPushButton(self.gridLayoutWidget_2)
         self.pushButton_4.setText("")
@@ -154,6 +165,7 @@ class Ui_MainWindow(object):
         self.pushButton_4.setIcon(icon6)
         self.pushButton_4.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_4.setObjectName("pushButton_4")
+        self.pushButton_4.setStyleSheet('''QPushButton{background:#FFF0F5;border-radius:5px;}QPushButton:hover{background:green;}''')
         self.gridLayout_2.addWidget(self.pushButton_4, 0, 1, 1, 1)
         self.pushButton_5 = QtWidgets.QPushButton(self.gridLayoutWidget_2)
         self.pushButton_5.setText("")
@@ -162,6 +174,7 @@ class Ui_MainWindow(object):
         self.pushButton_5.setIcon(icon7)
         self.pushButton_5.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_5.setObjectName("pushButton_5")
+        self.pushButton_5.setStyleSheet('''QPushButton{background:#FFF0F5;border-radius:5px;}QPushButton:hover{background:green;}''')
         self.gridLayout_2.addWidget(self.pushButton_5, 0, 2, 1, 1)
         self.pushButton_6 = QtWidgets.QPushButton(self.gridLayoutWidget_2)
         self.pushButton_6.setText("")
@@ -170,6 +183,7 @@ class Ui_MainWindow(object):
         self.pushButton_6.setIcon(icon8)
         self.pushButton_6.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_6.setObjectName("pushButton_6")
+        self.pushButton_6.setStyleSheet('''QPushButton{background:#FFF0F5;border-radius:5px;}QPushButton:hover{background:green;}''')
         self.gridLayout_2.addWidget(self.pushButton_6, 1, 0, 1, 1)
         self.pushButton_7 = QtWidgets.QPushButton(self.gridLayoutWidget_2)
         self.pushButton_7.setText("")
@@ -178,6 +192,7 @@ class Ui_MainWindow(object):
         self.pushButton_7.setIcon(icon9)
         self.pushButton_7.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_7.setObjectName("pushButton_7")
+        self.pushButton_7.setStyleSheet('''QPushButton{background:#FFF0F5;border-radius:5px;}QPushButton:hover{background:green;}''')
         self.gridLayout_2.addWidget(self.pushButton_7, 1, 1, 1, 1)
         self.pushButton_8 = QtWidgets.QPushButton(self.gridLayoutWidget_2)
         self.pushButton_8.setText("")
@@ -186,6 +201,7 @@ class Ui_MainWindow(object):
         self.pushButton_8.setIcon(icon10)
         self.pushButton_8.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_8.setObjectName("pushButton_8")
+        self.pushButton_8.setStyleSheet('''QPushButton{background:#FFF0F5;border-radius:5px;}QPushButton:hover{background:green;}''')
         self.gridLayout_2.addWidget(self.pushButton_8, 1, 2, 1, 1)
         self.line_2 = QtWidgets.QFrame(self.tab)
         self.line_2.setGeometry(QtCore.QRect(330, 10, 20, 70))
@@ -208,6 +224,7 @@ class Ui_MainWindow(object):
         self.pushButton_10.setIcon(icon11)
         self.pushButton_10.setIconSize(QtCore.QSize(20, 20))
         self.pushButton_10.setObjectName("pushButton_10")
+        self.pushButton_10.setStyleSheet('''QPushButton{background:#FFF0F5;border-radius:5px;}QPushButton:hover{background:green;}''')
         self.gridLayout_3.addWidget(self.pushButton_10, 0, 1, 1, 1)
         self.pushButton_18 = QtWidgets.QPushButton(self.gridLayoutWidget_3)
         self.pushButton_18.setText("")
@@ -216,6 +233,7 @@ class Ui_MainWindow(object):
         self.pushButton_18.setIcon(icon12)
         self.pushButton_18.setIconSize(QtCore.QSize(20, 20))
         self.pushButton_18.setObjectName("pushButton_18")
+        self.pushButton_18.setStyleSheet('''QPushButton{background:#FFF0F5;border-radius:5px;}QPushButton:hover{background:green;}''')
         self.gridLayout_3.addWidget(self.pushButton_18, 1, 1, 1, 1)
         self.pushButton_9 = QtWidgets.QPushButton(self.gridLayoutWidget_3)
         self.pushButton_9.setText("")
@@ -224,6 +242,7 @@ class Ui_MainWindow(object):
         self.pushButton_9.setIcon(icon13)
         self.pushButton_9.setIconSize(QtCore.QSize(20, 20))
         self.pushButton_9.setObjectName("pushButton_9")
+        self.pushButton_9.setStyleSheet('''QPushButton{background:#FFF0F5;border-radius:5px;}QPushButton:hover{background:green;}''')
         self.gridLayout_3.addWidget(self.pushButton_9, 0, 0, 1, 1)
         self.label_5 = QtWidgets.QLabel(self.tab)
         self.label_5.setGeometry(QtCore.QRect(370, 80, 71, 12))
@@ -271,14 +290,163 @@ class Ui_MainWindow(object):
         self.gridLayout_4.addWidget(self.label_11, 2, 0, 1, 1)
         self.comboBox = QtWidgets.QComboBox(self.gridLayoutWidget_4)
         self.comboBox.setObjectName("comboBox")
+        self.comboBox.setStyleSheet("QComboBox {"
+                                    "combobox-popup: 0;\n"  # 滚动条设置必需
+                                    "border-style:none; "
+                                    "padding-left:10px;  "   # 字体距离左边的距离
+                                    "width:48px; "
+                                    "height:24px; "
+                                    "font-size:12px; "
+                                    "font-family:PingFangSC-Regular,PingFang SC; "
+                                    "font-weight:400; "
+                                    "color:rgba(93,169,255,1);\n"
+                                    "line-height:24px; }\n"
+                                    "QComboBox:drop-down {"  # 选择箭头样式
+                                    "width:40px;  "
+                                    "height:50px; "
+                                    "border: none;  "
+                                    "subcontrol-position: right center; "  # 位置
+                                    "subcontrol-origin: padding;}\n"  # 对齐方式
+
+                                    "QComboBox:down-arrow {"  # 选择箭头，继承drop-down
+                                    "border: none; "
+                                    "background: transparent; "
+                                    "image: url(\"./ui/image/down.png\");}\n"
+
+                                    "QComboBox:down-arrow:pressed { image: url(\"./ui/image/up.png\"); }\n"  # 选择箭头
+
+                                    "QComboBox QAbstractItemView {"  # 下拉选项样式
+                                    "color:black; "
+                                    "background: transparent; "
+                                    "selection-color:rgba(93,169,255,1);"
+                                    "selection-background-color: rgba(255,255,255,1);"
+                                    "}\n"
+                                    
+                                    "QComboBox QAbstractScrollArea QScrollBar:vertical {"  # 滚动条样式
+                                    "width: 6px;\n"
+                                    "height: 100px;"
+                                    "background-color: transparent;  }\n"
+
+                                    "QComboBox QAbstractScrollArea QScrollBar::handle:vertical {\n"  # 滚动条样式
+                                    "border-radius: 3px;   "
+                                    "background: rgba(0,0,0,0.1);}\n"
+
+                                    # "QComboBox QAbstractScrollArea QScrollBar::handle:vertical:hover {\n"  # 划过滚动条，变化
+                                    # "background: rgb(90, 91, 93);}\n"
+
+                                    "QComboBox QScrollBar::add-line::vertical{"  # 滚动条上箭头
+                                    "border:none;}"
+                                    "QComboBox QScrollBar::sub-line::vertical{"  # 滚动条下箭头
+                                    "border:none;}"
+                                    "")
         self.comboBox.addItem("")
         self.gridLayout_4.addWidget(self.comboBox, 1, 1, 1, 1)
         self.comboBox_2 = QtWidgets.QComboBox(self.gridLayoutWidget_4)
         self.comboBox_2.setObjectName("comboBox_2")
         self.comboBox_2.addItem("")
+        self.comboBox_2.setStyleSheet("QComboBox {"
+                                    "combobox-popup: 0;\n"  # 滚动条设置必需
+                                    "border-style:none; "
+                                    "padding-left:10px;  "   # 字体距离左边的距离
+                                    "width:48px; "
+                                    "height:24px; "
+                                    "font-size:12px; "
+                                    "font-family:PingFangSC-Regular,PingFang SC; "
+                                    "font-weight:400; "
+                                    "color:rgba(93,169,255,1);\n"
+                                    "line-height:24px; }\n"
+                                    
+                                    "QComboBox:drop-down {"  # 选择箭头样式
+                                    "width:40px;  "
+                                    "height:50px; "
+                                    "border: none;  "
+                                    "subcontrol-position: right center; "  # 位置
+                                    "subcontrol-origin: padding;}\n"  # 对齐方式
+
+                                    "QComboBox:down-arrow {"  # 选择箭头，继承drop-down
+                                    "border: none; "
+                                    "background: transparent; "
+                                    "image: url(\"./ui/image/down.png\");}\n"
+
+                                    "QComboBox:down-arrow:pressed { image: url(\"./ui/image/up.png\"); }\n"  # 选择箭头
+
+                                    "QComboBox QAbstractItemView {"  # 下拉选项样式
+                                    "color:black; "
+                                    "background: transparent; "
+                                    "selection-color:rgba(93,169,255,1);"
+                                    "selection-background-color: rgba(255,255,255,1);"
+                                    "}\n"
+                                    
+                                    "QComboBox QAbstractScrollArea QScrollBar:vertical {"  # 滚动条样式
+                                    "width: 6px;\n"
+                                    "height: 100px;"
+                                    "background-color: transparent;  }\n"
+
+                                    "QComboBox QAbstractScrollArea QScrollBar::handle:vertical {\n"  # 滚动条样式
+                                    "border-radius: 3px;   "
+                                    "background: rgba(0,0,0,0.1);}\n"
+
+                                    # "QComboBox QAbstractScrollArea QScrollBar::handle:vertical:hover {\n"  # 划过滚动条，变化
+                                    # "background: rgb(90, 91, 93);}\n"
+
+                                    "QComboBox QScrollBar::add-line::vertical{"  # 滚动条上箭头
+                                    "border:none;}"
+                                    "QComboBox QScrollBar::sub-line::vertical{"  # 滚动条下箭头
+                                    "border:none;}"
+                                    "")
         self.gridLayout_4.addWidget(self.comboBox_2, 0, 1, 1, 1)
         self.comboBox_3 = QtWidgets.QComboBox(self.gridLayoutWidget_4)
         self.comboBox_3.setObjectName("comboBox_3")
+        self.comboBox_3.setStyleSheet("QComboBox {"
+                                    "combobox-popup: 0;\n"  # 滚动条设置必需
+                                    "border-style:none; "
+                                    "padding-left:10px;  "   # 字体距离左边的距离
+                                    "width:48px; "
+                                    "height:24px; "
+                                    "font-size:12px; "
+                                    "font-family:PingFangSC-Regular,PingFang SC; "
+                                    "font-weight:400; "
+                                    "color:rgba(93,169,255,1);\n"
+                                    "line-height:24px; }\n"
+                                    
+                                    "QComboBox:drop-down {"  # 选择箭头样式
+                                    "width:40px;  "
+                                    "height:50px; "
+                                    "border: none;  "
+                                    "subcontrol-position: right center; "  # 位置
+                                    "subcontrol-origin: padding;}\n"  # 对齐方式
+
+                                    "QComboBox:down-arrow {"  # 选择箭头，继承drop-down
+                                    "border: none; "
+                                    "background: transparent; "
+                                    "image: url(\"./ui/image/down.png\");}\n"
+
+                                    "QComboBox:down-arrow:pressed { image: url(\"./ui/image/up.png\"); }\n"  # 选择箭头
+
+                                    "QComboBox QAbstractItemView {"  # 下拉选项样式
+                                    "color:black; "
+                                    "background: transparent; "
+                                    "selection-color:rgba(93,169,255,1);"
+                                    "selection-background-color: rgba(255,255,255,1);"
+                                    "}\n"
+                                    
+                                    "QComboBox QAbstractScrollArea QScrollBar:vertical {"  # 滚动条样式
+                                    "width: 6px;\n"
+                                    "height: 100px;"
+                                    "background-color: transparent;  }\n"
+
+                                    "QComboBox QAbstractScrollArea QScrollBar::handle:vertical {\n"  # 滚动条样式
+                                    "border-radius: 3px;   "
+                                    "background: rgba(0,0,0,0.1);}\n"
+
+                                    # "QComboBox QAbstractScrollArea QScrollBar::handle:vertical:hover {\n"  # 划过滚动条，变化
+                                    # "background: rgb(90, 91, 93);}\n"
+
+                                    "QComboBox QScrollBar::add-line::vertical{"  # 滚动条上箭头
+                                    "border:none;}"
+                                    "QComboBox QScrollBar::sub-line::vertical{"  # 滚动条下箭头
+                                    "border:none;}"
+                                    "")
         self.gridLayout_4.addWidget(self.comboBox_3, 2, 1, 1, 1)
         self.label_10 = QtWidgets.QLabel(self.gridLayoutWidget_4)
         self.label_10.setObjectName("label_10")
@@ -299,6 +467,7 @@ class Ui_MainWindow(object):
         self.pushButton_13.setIcon(icon14)
         self.pushButton_13.setIconSize(QtCore.QSize(20, 20))
         self.pushButton_13.setObjectName("pushButton_13")
+        self.pushButton_13.setStyleSheet('''QPushButton{background:#FFF0F5;border-radius:5px;}QPushButton:hover{background:green;}''')
         self.gridLayout_5.addWidget(self.pushButton_13, 0, 0, 1, 1)
         self.pushButton_14 = QtWidgets.QPushButton(self.gridLayoutWidget_5)
         self.pushButton_14.setText("")
@@ -307,6 +476,7 @@ class Ui_MainWindow(object):
         self.pushButton_14.setIcon(icon15)
         self.pushButton_14.setIconSize(QtCore.QSize(20, 20))
         self.pushButton_14.setObjectName("pushButton_14")
+        self.pushButton_14.setStyleSheet('''QPushButton{background:#FFF0F5;border-radius:5px;}QPushButton:hover{background:green;}''')
         self.gridLayout_5.addWidget(self.pushButton_14, 0, 1, 1, 1)
         self.pushButton_15 = QtWidgets.QPushButton(self.gridLayoutWidget_5)
         self.pushButton_15.setText("")
@@ -315,12 +485,14 @@ class Ui_MainWindow(object):
         self.pushButton_15.setIcon(icon16)
         self.pushButton_15.setIconSize(QtCore.QSize(20, 20))
         self.pushButton_15.setObjectName("pushButton_15")
+        self.pushButton_15.setStyleSheet('''QPushButton{background:#FFF0F5;border-radius:5px;}QPushButton:hover{background:green;}''')
         self.gridLayout_5.addWidget(self.pushButton_15, 1, 0, 1, 1)
         self.pushButton_16 = QtWidgets.QPushButton(self.gridLayoutWidget_5)
         self.pushButton_16.setText("")
         self.pushButton_16.setIcon(icon15)
         self.pushButton_16.setIconSize(QtCore.QSize(20, 20))
         self.pushButton_16.setObjectName("pushButton_16")
+        self.pushButton_16.setStyleSheet('''QPushButton{background:#FFF0F5;border-radius:5px;}QPushButton:hover{background:green;}''')
         self.gridLayout_5.addWidget(self.pushButton_16, 1, 1, 1, 1)
         self.tabWidget.addTab(self.tab, "")
         self.tab_2 = QtWidgets.QWidget()
@@ -533,16 +705,17 @@ class Ui_MainWindow(object):
         self.pushButton_4.clicked.connect(self.showElliptical)
         self.pushButton_3.clicked.connect(self.design_Cylinder)
         self.pushButton_7.clicked.connect(self.design_TTkaikong)
-        self.pushButton_10.clicked.connect(self.spawn_PDF_File_Report_Cylinder)
-        self.pushButton_18.clicked.connect(self.spawn_PDF_File_Report_TTKT)
+        self.pushButton_10.clicked.connect(self.spawn_PDF_File)
 
 
+
+        MainWindow.setWindowOpacity(0.95)
+        #MainWindow.setWindowFlag(QtCore.Qt.FramelessWindowHint)
         self.retranslateUi(MainWindow)
         self.tabWidget.setCurrentIndex(0)
         self.tabWidget_2.setCurrentIndex(0)
         self.toolBox_2.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
-
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
@@ -645,7 +818,6 @@ class Ui_MainWindow(object):
         self.Dialog_TTKK.show()
         self.Dialog_TTKK.exec_()
 
-
     #Send Input Parameter to MainWindow
     def sendmsg_cylinder(self):
         R = self.disk.lineEdit_3.text() # 壳体内径
@@ -663,7 +835,7 @@ class Ui_MainWindow(object):
                 and self.is_number(cylinder_corrosion)\
                 and self.is_number(cylinder_welding):
 
-            self.cylinder_parameter = {
+            self.parameter = {
                 'pressure': cylinder_pressure,
                 'temperature': cylinder_temperature,
                 'corrosion': cylinder_corrosion,
@@ -682,11 +854,12 @@ class Ui_MainWindow(object):
             C.start()
             C.join()
             self.display.DisplayShape(C.new_thing1, update=True)
+            self.mark = 'cylinder'
         else:
             self.Error_dialog.label.setText("Input Error Type!")
             self.E_Dialog.show()
             self.E_Dialog.exec_()
-        self.clear_design_dialog()
+        #self.clear_design_dialog()
 
     # Send Input Parameter to MainWindow
     def sendmsg_TTKT(self):
@@ -722,7 +895,7 @@ class Ui_MainWindow(object):
             and self.is_number(L_43) and self.is_number(R_nc)\
             and self.is_number(thita):
 
-            self.TTKK_parameter = {'shell_internal_radius': D_i,
+            self.parameter = {'shell_internal_radius': D_i,
                                    'shell_thickness': t,
                                    'cylinder_length': l,
                                    'pipe_internal_radius': R_n,
@@ -743,7 +916,6 @@ class Ui_MainWindow(object):
                                    'E': E,
                                    'thita': thita}
 
-
             D_i = float(D_i)
             t = float(t)
             l = float(l)
@@ -760,12 +932,12 @@ class Ui_MainWindow(object):
             tongtikaikong.start()
             tongtikaikong.join()
             self.display.DisplayShape(tongtikaikong.new_thing0, update=True)
-
+            self.mark = 'TTKT'
         else:
             self.Error_dialog.label.setText("Input Error Type!")
             self.E_Dialog.show()
             self.E_Dialog.exec_()
-        self.clear_design_dialog()
+        #self.clear_design_dialog()
 
     #Clear Design UI after Inputing
     def clear_design_dialog(self):
@@ -795,8 +967,8 @@ class Ui_MainWindow(object):
 
     # spawn cylinder report
     def spawn_PDF_File_Report_Cylinder(self):
-        if self.cylinder_parameter != {}:
-            pdf_generator = PDF_Spawn_Cylinder.PDFGenerator(self.cylinder_parameter)
+        if self.parameter != {}:
+            pdf_generator = PDF_Spawn_Cylinder.PDFGenerator(self.parameter)
             pdf_generator.genTaskPDF()
         else:
             self.Error_dialog.label.setText("There is no input!")
@@ -805,10 +977,21 @@ class Ui_MainWindow(object):
 
     # spawn TTKT report
     def spawn_PDF_File_Report_TTKT(self):
-        if self.TTKK_parameter != {}:
-            pdf_generator = PDF_Spawn_TTKT.PDFGenerator(self.TTKK_parameter)
+        if self.parameter != {}:
+            pdf_generator = PDF_Spawn_TTKT.PDFGenerator(self.parameter)
             pdf_generator.genTaskPDF()
         else:
             self.Error_dialog.label.setText("There is no input!")
             self.E_Dialog.show()
             self.E_Dialog.exec_()
+
+    def spawn_PDF_File(self):
+        switch = {'cylinder': self.spawn_PDF_File_Report_Cylinder,
+                       'TTKT': self.spawn_PDF_File_Report_TTKT}
+        switch.get(self.mark, self.default)()
+        self.mark = ''
+
+    def default(self):
+        self.Error_dialog.label.setText("There is no model!")
+        self.E_Dialog.show()
+        self.E_Dialog.exec_()

@@ -14,160 +14,282 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
-        Dialog.resize(661, 408)
+        Dialog.resize(680, 408)
         self.gridLayout = QtWidgets.QGridLayout(Dialog)
         self.gridLayout.setObjectName("gridLayout")
-        self.label_7 = QtWidgets.QLabel(Dialog)
-        self.label_7.setObjectName("label_7")
-        self.gridLayout.addWidget(self.label_7, 3, 0, 1, 1)
-        self.lineEdit_5 = QtWidgets.QLineEdit(Dialog)
-        self.lineEdit_5.setObjectName("lineEdit_5")
-        self.gridLayout.addWidget(self.lineEdit_5, 2, 1, 1, 1)
+        self.lineEdit_6 = QtWidgets.QLineEdit(Dialog)
+        self.lineEdit_6.setStyleSheet("QLineEdit{\n"
+"        border:1px solid gray;\n"
+"        width:150px;\n"
+"        border-radius:10px;\n"
+"        padding:2px 4px;\n"
+"}")
+        self.lineEdit_6.setObjectName("lineEdit_6")
+        self.gridLayout.addWidget(self.lineEdit_6, 2, 4, 1, 1)
         self.label_12 = QtWidgets.QLabel(Dialog)
         self.label_12.setObjectName("label_12")
         self.gridLayout.addWidget(self.label_12, 5, 2, 1, 1)
-        self.lineEdit_9 = QtWidgets.QLineEdit(Dialog)
-        self.lineEdit_9.setObjectName("lineEdit_9")
-        self.gridLayout.addWidget(self.lineEdit_9, 4, 1, 1, 1)
-        self.label_5 = QtWidgets.QLabel(Dialog)
-        self.label_5.setObjectName("label_5")
-        self.gridLayout.addWidget(self.label_5, 2, 0, 1, 1)
-        self.lineEdit_16 = QtWidgets.QLineEdit(Dialog)
-        self.lineEdit_16.setObjectName("lineEdit_16")
-        self.gridLayout.addWidget(self.lineEdit_16, 7, 4, 1, 1)
-        self.label_15 = QtWidgets.QLabel(Dialog)
-        self.label_15.setObjectName("label_15")
-        self.gridLayout.addWidget(self.label_15, 7, 0, 1, 1)
-        self.label = QtWidgets.QLabel(Dialog)
-        self.label.setObjectName("label")
-        self.gridLayout.addWidget(self.label, 0, 0, 1, 1)
-        self.label_3 = QtWidgets.QLabel(Dialog)
-        self.label_3.setObjectName("label_3")
-        self.gridLayout.addWidget(self.label_3, 1, 0, 1, 1)
-        self.label_14 = QtWidgets.QLabel(Dialog)
-        self.label_14.setObjectName("label_14")
-        self.gridLayout.addWidget(self.label_14, 6, 2, 1, 1)
-        self.label_16 = QtWidgets.QLabel(Dialog)
-        self.label_16.setObjectName("label_16")
-        self.gridLayout.addWidget(self.label_16, 7, 2, 1, 1)
-        self.label_8 = QtWidgets.QLabel(Dialog)
-        self.label_8.setObjectName("label_8")
-        self.gridLayout.addWidget(self.label_8, 3, 2, 1, 1)
-        self.lineEdit_18 = QtWidgets.QLineEdit(Dialog)
-        self.lineEdit_18.setObjectName("lineEdit_18")
-        self.gridLayout.addWidget(self.lineEdit_18, 8, 4, 1, 1)
-        self.lineEdit_7 = QtWidgets.QLineEdit(Dialog)
-        self.lineEdit_7.setObjectName("lineEdit_7")
-        self.gridLayout.addWidget(self.lineEdit_7, 3, 1, 1, 1)
-        self.lineEdit_8 = QtWidgets.QLineEdit(Dialog)
-        self.lineEdit_8.setObjectName("lineEdit_8")
-        self.gridLayout.addWidget(self.lineEdit_8, 3, 4, 1, 1)
-        self.lineEdit_12 = QtWidgets.QLineEdit(Dialog)
-        self.lineEdit_12.setObjectName("lineEdit_12")
-        self.gridLayout.addWidget(self.lineEdit_12, 5, 4, 1, 1)
-        self.lineEdit_13 = QtWidgets.QLineEdit(Dialog)
-        self.lineEdit_13.setObjectName("lineEdit_13")
-        self.gridLayout.addWidget(self.lineEdit_13, 6, 1, 1, 1)
-        self.lineEdit_17 = QtWidgets.QLineEdit(Dialog)
-        self.lineEdit_17.setObjectName("lineEdit_17")
-        self.gridLayout.addWidget(self.lineEdit_17, 8, 1, 1, 1)
-        self.label_13 = QtWidgets.QLabel(Dialog)
-        self.label_13.setObjectName("label_13")
-        self.gridLayout.addWidget(self.label_13, 6, 0, 1, 1)
-        self.lineEdit_11 = QtWidgets.QLineEdit(Dialog)
-        self.lineEdit_11.setObjectName("lineEdit_11")
-        self.gridLayout.addWidget(self.lineEdit_11, 5, 1, 1, 1)
-        self.buttonBox = QtWidgets.QDialogButtonBox(Dialog)
-        self.buttonBox.setOrientation(QtCore.Qt.Horizontal)
-        self.buttonBox.setStandardButtons(QtWidgets.QDialogButtonBox.Cancel|QtWidgets.QDialogButtonBox.Ok)
-        self.buttonBox.setObjectName("buttonBox")
-        self.gridLayout.addWidget(self.buttonBox, 10, 4, 1, 1)
-        self.label_18 = QtWidgets.QLabel(Dialog)
-        self.label_18.setObjectName("label_18")
-        self.gridLayout.addWidget(self.label_18, 8, 2, 1, 1)
-        self.lineEdit_6 = QtWidgets.QLineEdit(Dialog)
-        self.lineEdit_6.setObjectName("lineEdit_6")
-        self.gridLayout.addWidget(self.lineEdit_6, 2, 4, 1, 1)
-        self.label_4 = QtWidgets.QLabel(Dialog)
-        self.label_4.setObjectName("label_4")
-        self.gridLayout.addWidget(self.label_4, 1, 2, 1, 1)
-        self.lineEdit_15 = QtWidgets.QLineEdit(Dialog)
-        self.lineEdit_15.setObjectName("lineEdit_15")
-        self.gridLayout.addWidget(self.lineEdit_15, 7, 1, 1, 1)
-        self.label_2 = QtWidgets.QLabel(Dialog)
-        self.label_2.setObjectName("label_2")
-        self.gridLayout.addWidget(self.label_2, 0, 2, 1, 1)
-        self.lineEdit = QtWidgets.QLineEdit(Dialog)
-        self.lineEdit.setObjectName("lineEdit")
-        self.gridLayout.addWidget(self.lineEdit, 0, 1, 1, 1)
-        self.lineEdit_10 = QtWidgets.QLineEdit(Dialog)
-        self.lineEdit_10.setObjectName("lineEdit_10")
-        self.gridLayout.addWidget(self.lineEdit_10, 4, 4, 1, 1)
-        self.label_17 = QtWidgets.QLabel(Dialog)
-        self.label_17.setObjectName("label_17")
-        self.gridLayout.addWidget(self.label_17, 8, 0, 1, 1)
-        self.label_9 = QtWidgets.QLabel(Dialog)
-        self.label_9.setObjectName("label_9")
-        self.gridLayout.addWidget(self.label_9, 4, 0, 1, 1)
-        self.lineEdit_3 = QtWidgets.QLineEdit(Dialog)
-        self.lineEdit_3.setObjectName("lineEdit_3")
-        self.gridLayout.addWidget(self.lineEdit_3, 1, 1, 1, 1)
         self.label_10 = QtWidgets.QLabel(Dialog)
         self.label_10.setObjectName("label_10")
         self.gridLayout.addWidget(self.label_10, 4, 2, 1, 1)
-        self.label_6 = QtWidgets.QLabel(Dialog)
-        self.label_6.setObjectName("label_6")
-        self.gridLayout.addWidget(self.label_6, 2, 2, 1, 1)
-        self.lineEdit_4 = QtWidgets.QLineEdit(Dialog)
-        self.lineEdit_4.setObjectName("lineEdit_4")
-        self.gridLayout.addWidget(self.lineEdit_4, 1, 4, 1, 1)
-        self.lineEdit_2 = QtWidgets.QLineEdit(Dialog)
-        self.lineEdit_2.setObjectName("lineEdit_2")
-        self.gridLayout.addWidget(self.lineEdit_2, 0, 4, 1, 1)
-        self.lineEdit_14 = QtWidgets.QLineEdit(Dialog)
-        self.lineEdit_14.setObjectName("lineEdit_14")
-        self.gridLayout.addWidget(self.lineEdit_14, 6, 4, 1, 1)
+        self.lineEdit_20 = QtWidgets.QLineEdit(Dialog)
+        self.lineEdit_20.setStyleSheet("QLineEdit{\n"
+"        border:1px solid gray;\n"
+"        width:150px;\n"
+"        border-radius:10px;\n"
+"        padding:2px 4px;\n"
+"}")
+        self.lineEdit_20.setObjectName("lineEdit_20")
+        self.gridLayout.addWidget(self.lineEdit_20, 9, 4, 1, 1)
+        self.label_4 = QtWidgets.QLabel(Dialog)
+        self.label_4.setObjectName("label_4")
+        self.gridLayout.addWidget(self.label_4, 1, 2, 1, 1)
+        self.label_7 = QtWidgets.QLabel(Dialog)
+        self.label_7.setObjectName("label_7")
+        self.gridLayout.addWidget(self.label_7, 3, 0, 1, 1)
+        self.label_13 = QtWidgets.QLabel(Dialog)
+        self.label_13.setObjectName("label_13")
+        self.gridLayout.addWidget(self.label_13, 6, 0, 1, 1)
+        self.label_2 = QtWidgets.QLabel(Dialog)
+        self.label_2.setObjectName("label_2")
+        self.gridLayout.addWidget(self.label_2, 0, 2, 1, 1)
+        self.lineEdit_7 = QtWidgets.QLineEdit(Dialog)
+        self.lineEdit_7.setStyleSheet("QLineEdit{\n"
+"        border:1px solid gray;\n"
+"        width:150px;\n"
+"        border-radius:10px;\n"
+"        padding:2px 4px;\n"
+"}")
+        self.lineEdit_7.setObjectName("lineEdit_7")
+        self.gridLayout.addWidget(self.lineEdit_7, 3, 1, 1, 1)
+        self.label_20 = QtWidgets.QLabel(Dialog)
+        self.label_20.setObjectName("label_20")
+        self.gridLayout.addWidget(self.label_20, 9, 2, 1, 1)
+        self.label_18 = QtWidgets.QLabel(Dialog)
+        self.label_18.setObjectName("label_18")
+        self.gridLayout.addWidget(self.label_18, 8, 2, 1, 1)
+        self.lineEdit_11 = QtWidgets.QLineEdit(Dialog)
+        self.lineEdit_11.setStyleSheet("QLineEdit{\n"
+"        border:1px solid gray;\n"
+"        width:150px;\n"
+"        border-radius:10px;\n"
+"        padding:2px 4px;\n"
+"}")
+        self.lineEdit_11.setObjectName("lineEdit_11")
+        self.gridLayout.addWidget(self.lineEdit_11, 5, 1, 1, 1)
+        self.lineEdit_12 = QtWidgets.QLineEdit(Dialog)
+        self.lineEdit_12.setStyleSheet("QLineEdit{\n"
+"        border:1px solid gray;\n"
+"        width:150px;\n"
+"        border-radius:10px;\n"
+"        padding:2px 4px;\n"
+"}")
+        self.lineEdit_12.setObjectName("lineEdit_12")
+        self.gridLayout.addWidget(self.lineEdit_12, 5, 4, 1, 1)
+        self.lineEdit_9 = QtWidgets.QLineEdit(Dialog)
+        self.lineEdit_9.setStyleSheet("QLineEdit{\n"
+"        border:1px solid gray;\n"
+"        width:150px;\n"
+"        border-radius:10px;\n"
+"        padding:2px 4px;\n"
+"}")
+        self.lineEdit_9.setObjectName("lineEdit_9")
+        self.gridLayout.addWidget(self.lineEdit_9, 4, 1, 1, 1)
+        self.lineEdit_5 = QtWidgets.QLineEdit(Dialog)
+        self.lineEdit_5.setStyleSheet("QLineEdit{\n"
+"        border:1px solid gray;\n"
+"        width:150px;\n"
+"        border-radius:10px;\n"
+"        padding:2px 4px;\n"
+"}")
+        self.lineEdit_5.setObjectName("lineEdit_5")
+        self.gridLayout.addWidget(self.lineEdit_5, 2, 1, 1, 1)
+        self.lineEdit_18 = QtWidgets.QLineEdit(Dialog)
+        self.lineEdit_18.setStyleSheet("QLineEdit{\n"
+"        border:1px solid gray;\n"
+"        width:150px;\n"
+"        border-radius:10px;\n"
+"        padding:2px 4px;\n"
+"}")
+        self.lineEdit_18.setObjectName("lineEdit_18")
+        self.gridLayout.addWidget(self.lineEdit_18, 8, 4, 1, 1)
+        self.lineEdit_13 = QtWidgets.QLineEdit(Dialog)
+        self.lineEdit_13.setStyleSheet("QLineEdit{\n"
+"        border:1px solid gray;\n"
+"        width:150px;\n"
+"        border-radius:10px;\n"
+"        padding:2px 4px;\n"
+"}")
+        self.lineEdit_13.setObjectName("lineEdit_13")
+        self.gridLayout.addWidget(self.lineEdit_13, 6, 1, 1, 1)
         self.label_11 = QtWidgets.QLabel(Dialog)
         self.label_11.setObjectName("label_11")
         self.gridLayout.addWidget(self.label_11, 5, 0, 1, 1)
         self.label_19 = QtWidgets.QLabel(Dialog)
         self.label_19.setObjectName("label_19")
         self.gridLayout.addWidget(self.label_19, 9, 0, 1, 1)
+        self.lineEdit_16 = QtWidgets.QLineEdit(Dialog)
+        self.lineEdit_16.setStyleSheet("QLineEdit{\n"
+"        border:1px solid gray;\n"
+"        width:150px;\n"
+"        border-radius:10px;\n"
+"        padding:2px 4px;\n"
+"}")
+        self.lineEdit_16.setObjectName("lineEdit_16")
+        self.gridLayout.addWidget(self.lineEdit_16, 7, 4, 1, 1)
+        self.lineEdit_17 = QtWidgets.QLineEdit(Dialog)
+        self.lineEdit_17.setStyleSheet("QLineEdit{\n"
+"        border:1px solid gray;\n"
+"        width:150px;\n"
+"        border-radius:10px;\n"
+"        padding:2px 4px;\n"
+"}")
+        self.lineEdit_17.setObjectName("lineEdit_17")
+        self.gridLayout.addWidget(self.lineEdit_17, 8, 1, 1, 1)
+        self.lineEdit_14 = QtWidgets.QLineEdit(Dialog)
+        self.lineEdit_14.setStyleSheet("QLineEdit{\n"
+"        border:1px solid gray;\n"
+"        width:150px;\n"
+"        border-radius:10px;\n"
+"        padding:2px 4px;\n"
+"}")
+        self.lineEdit_14.setObjectName("lineEdit_14")
+        self.gridLayout.addWidget(self.lineEdit_14, 6, 4, 1, 1)
+        self.label_16 = QtWidgets.QLabel(Dialog)
+        self.label_16.setObjectName("label_16")
+        self.gridLayout.addWidget(self.label_16, 7, 2, 1, 1)
         self.lineEdit_19 = QtWidgets.QLineEdit(Dialog)
+        self.lineEdit_19.setStyleSheet("QLineEdit{\n"
+"        border:1px solid gray;\n"
+"        width:150px;\n"
+"        border-radius:10px;\n"
+"        padding:2px 4px;\n"
+"}")
         self.lineEdit_19.setObjectName("lineEdit_19")
         self.gridLayout.addWidget(self.lineEdit_19, 9, 1, 1, 1)
-        self.label_20 = QtWidgets.QLabel(Dialog)
-        self.label_20.setObjectName("label_20")
-        self.gridLayout.addWidget(self.label_20, 9, 2, 1, 1)
-        self.lineEdit_20 = QtWidgets.QLineEdit(Dialog)
-        self.lineEdit_20.setObjectName("lineEdit_20")
-        self.gridLayout.addWidget(self.lineEdit_20, 9, 4, 1, 1)
+        self.label_9 = QtWidgets.QLabel(Dialog)
+        self.label_9.setObjectName("label_9")
+        self.gridLayout.addWidget(self.label_9, 4, 0, 1, 1)
+        self.label_14 = QtWidgets.QLabel(Dialog)
+        self.label_14.setObjectName("label_14")
+        self.gridLayout.addWidget(self.label_14, 6, 2, 1, 1)
+        self.lineEdit_10 = QtWidgets.QLineEdit(Dialog)
+        self.lineEdit_10.setStyleSheet("QLineEdit{\n"
+"        border:1px solid gray;\n"
+"        width:150px;\n"
+"        border-radius:10px;\n"
+"        padding:2px 4px;\n"
+"}")
+        self.lineEdit_10.setObjectName("lineEdit_10")
+        self.gridLayout.addWidget(self.lineEdit_10, 4, 4, 1, 1)
+        self.label = QtWidgets.QLabel(Dialog)
+        self.label.setObjectName("label")
+        self.gridLayout.addWidget(self.label, 0, 0, 1, 1)
+        self.label_6 = QtWidgets.QLabel(Dialog)
+        self.label_6.setObjectName("label_6")
+        self.gridLayout.addWidget(self.label_6, 2, 2, 1, 1)
+        self.lineEdit_15 = QtWidgets.QLineEdit(Dialog)
+        self.lineEdit_15.setStyleSheet("QLineEdit{\n"
+"        border:1px solid gray;\n"
+"        width:150px;\n"
+"        border-radius:10px;\n"
+"        padding:2px 4px;\n"
+"}")
+        self.lineEdit_15.setObjectName("lineEdit_15")
+        self.gridLayout.addWidget(self.lineEdit_15, 7, 1, 1, 1)
+        self.label_15 = QtWidgets.QLabel(Dialog)
+        self.label_15.setObjectName("label_15")
+        self.gridLayout.addWidget(self.label_15, 7, 0, 1, 1)
+        self.lineEdit_8 = QtWidgets.QLineEdit(Dialog)
+        self.lineEdit_8.setStyleSheet("QLineEdit{\n"
+"        border:1px solid gray;\n"
+"        width:150px;\n"
+"        border-radius:10px;\n"
+"        padding:2px 4px;\n"
+"}")
+        self.lineEdit_8.setObjectName("lineEdit_8")
+        self.gridLayout.addWidget(self.lineEdit_8, 3, 4, 1, 1)
+        self.lineEdit = QtWidgets.QLineEdit(Dialog)
+        self.lineEdit.setStyleSheet("QLineEdit{\n"
+"        border:1px solid gray;\n"
+"        width:150px;\n"
+"        border-radius:10px;\n"
+"        padding:2px 4px;\n"
+"}")
+        self.lineEdit.setObjectName("lineEdit")
+        self.gridLayout.addWidget(self.lineEdit, 0, 1, 1, 1)
+        self.label_8 = QtWidgets.QLabel(Dialog)
+        self.label_8.setObjectName("label_8")
+        self.gridLayout.addWidget(self.label_8, 3, 2, 1, 1)
+        self.lineEdit_2 = QtWidgets.QLineEdit(Dialog)
+        self.lineEdit_2.setStyleSheet("QLineEdit{\n"
+"        border:1px solid gray;\n"
+"        width:150px;\n"
+"        border-radius:10px;\n"
+"        padding:2px 4px;\n"
+"}")
+        self.lineEdit_2.setObjectName("lineEdit_2")
+        self.gridLayout.addWidget(self.lineEdit_2, 0, 4, 1, 1)
+        self.lineEdit_4 = QtWidgets.QLineEdit(Dialog)
+        self.lineEdit_4.setStyleSheet("QLineEdit{\n"
+"        border:1px solid gray;\n"
+"        width:150px;\n"
+"        border-radius:10px;\n"
+"        padding:2px 4px;\n"
+"}")
+        self.lineEdit_4.setObjectName("lineEdit_4")
+        self.gridLayout.addWidget(self.lineEdit_4, 1, 4, 1, 1)
+        self.label_3 = QtWidgets.QLabel(Dialog)
+        self.label_3.setObjectName("label_3")
+        self.gridLayout.addWidget(self.label_3, 1, 0, 1, 1)
+        self.lineEdit_3 = QtWidgets.QLineEdit(Dialog)
+        self.lineEdit_3.setStyleSheet("QLineEdit{\n"
+"        border:1px solid gray;\n"
+"        width:150px;\n"
+"        border-radius:10px;\n"
+"        padding:2px 4px;\n"
+"}")
+        self.lineEdit_3.setObjectName("lineEdit_3")
+        self.gridLayout.addWidget(self.lineEdit_3, 1, 1, 1, 1)
+        self.label_5 = QtWidgets.QLabel(Dialog)
+        self.label_5.setObjectName("label_5")
+        self.gridLayout.addWidget(self.label_5, 2, 0, 1, 1)
+        self.label_17 = QtWidgets.QLabel(Dialog)
+        self.label_17.setObjectName("label_17")
+        self.gridLayout.addWidget(self.label_17, 8, 0, 1, 1)
+        self.buttonBox = QtWidgets.QDialogButtonBox(Dialog)
+        self.buttonBox.setStyleSheet("")
+        self.buttonBox.setOrientation(QtCore.Qt.Horizontal)
+        self.buttonBox.setStandardButtons(QtWidgets.QDialogButtonBox.Cancel|QtWidgets.QDialogButtonBox.Ok)
+        self.buttonBox.setObjectName("buttonBox")
+        self.gridLayout.addWidget(self.buttonBox, 10, 4, 1, 1)
 
         self.retranslateUi(Dialog)
         self.buttonBox.accepted.connect(Dialog.accept)
         self.buttonBox.rejected.connect(Dialog.reject)
+        Dialog.setWindowTitle("开孔筒体设计")
         QtCore.QMetaObject.connectSlotsByName(Dialog)
 
     def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
         Dialog.setWindowTitle(_translate("Dialog", "Dialog"))
-        self.label_7.setText(_translate("Dialog", "变厚度接管处"))
         self.label_12.setText(_translate("Dialog", "设计温度"))
-        self.label_5.setText(_translate("Dialog", "外侧接管伸出长度"))
-        self.label_15.setText(_translate("Dialog", "补强板宽度"))
-        self.label.setText(_translate("Dialog", "壳体内径"))
-        self.label_3.setText(_translate("Dialog", "圆筒长度"))
-        self.label_14.setText(_translate("Dialog", "接管腐蚀裕量"))
-        self.label_16.setText(_translate("Dialog", "补强板焊制容器焊脚长度"))
-        self.label_8.setText(_translate("Dialog", "补强板厚度"))
-        self.label_13.setText(_translate("Dialog", "壳体腐蚀裕量"))
-        self.label_18.setText(_translate("Dialog", "容器上沿接管开口方向接管半径"))
-        self.label_4.setText(_translate("Dialog", "接管内半径"))
-        self.label_2.setText(_translate("Dialog", "壳厚度"))
-        self.label_17.setText(_translate("Dialog", "内测接管填角焊缝的焊脚长度"))
-        self.label_9.setText(_translate("Dialog", "容器壁内侧接管伸出长度"))
         self.label_10.setText(_translate("Dialog", "外侧变厚度长度"))
-        self.label_6.setText(_translate("Dialog", "接管壁厚度"))
+        self.label_4.setText(_translate("Dialog", "接管内半径"))
+        self.label_7.setText(_translate("Dialog", "变厚度接管处"))
+        self.label_13.setText(_translate("Dialog", "壳体腐蚀裕量"))
+        self.label_2.setText(_translate("Dialog", "壳厚度"))
+        self.label_20.setText(_translate("Dialog", "接管轴线与筒体表面法线夹角"))
+        self.label_18.setText(_translate("Dialog", "容器上沿接管开口方向接管半径"))
         self.label_11.setText(_translate("Dialog", "设计压力"))
         self.label_19.setText(_translate("Dialog", "焊接接头系数"))
-        self.label_20.setText(_translate("Dialog", "接管轴线与筒体表面法线夹角"))
+        self.label_16.setText(_translate("Dialog", "补强板焊制容器焊脚长度"))
+        self.label_9.setText(_translate("Dialog", "容器壁内侧接管伸出长度"))
+        self.label_14.setText(_translate("Dialog", "接管腐蚀裕量"))
+        self.label.setText(_translate("Dialog", "壳体内径"))
+        self.label_6.setText(_translate("Dialog", "接管壁厚度"))
+        self.label_15.setText(_translate("Dialog", "补强板宽度"))
+        self.label_8.setText(_translate("Dialog", "补强板厚度"))
+        self.label_3.setText(_translate("Dialog", "圆筒长度"))
+        self.label_5.setText(_translate("Dialog", "外侧接管伸出长度"))
+        self.label_17.setText(_translate("Dialog", "内测接管填角焊缝的焊脚长度"))
