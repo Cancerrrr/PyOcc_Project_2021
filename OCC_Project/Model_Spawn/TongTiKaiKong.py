@@ -18,6 +18,8 @@ class TTKaikong(threading.Thread):
         self.t = t  # 壳厚度
         self.l = l  # 圆筒长度
         self.r = self.R - self.t  # 壳内径
+        if self.r <= 0:
+            self.r = 10
 
         # 开孔尺寸
         self.R_n = R_n  # 接管内半径

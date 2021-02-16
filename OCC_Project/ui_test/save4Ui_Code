@@ -13,12 +13,12 @@ from PyQt5.QtWidgets import QDialog
 
 from UI import Cylinder_design_dialog
 from UI import Error_Dialog
-from OCC_Example import Elliptical
+from Model_Spawn import Elliptical
 from pythonocc_canvas.qtDisplay import qtViewer3d
-from OCC_Example import cylinder
-from OCC_Example import TongTiKaiKong
+from Model_Spawn import cylinder
+from Model_Spawn import TongTiKaiKong
 from UI import TTkaikong
-from pdf_spawn import PDF_Spawn_Cylinder, PDF_Spawn_TTKT
+from PDF_Report_spawn import PDF_Spawn_Cylinder, PDF_Spawn_TTKT
 
 
 class Ui_MainWindow(object):

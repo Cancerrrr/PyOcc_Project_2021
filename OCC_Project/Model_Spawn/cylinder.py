@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
-
 # In[1]:
-
-
 from OCC.Core.BRepAlgoAPI import BRepAlgoAPI_Cut
 from OCC.Core.gp import gp_Pnt, gp_Ax2, gp_DZ, gp_OX, gp_Trsf, gp_Vec, gp_Dir, gp_Circ, gp_Ax1
 from OCC.Core.GC import GC_MakeArcOfCircle, GC_MakeSegment
@@ -13,7 +10,6 @@ from OCC.Core.BRepFilletAPI import BRepFilletAPI_MakeFillet
 import threading
 
 # In[2]:
-
 class Cylinder(threading.Thread):
     def __init__(self, R = 500, t = 30, L = 100):
         threading.Thread.__init__(self)
@@ -65,7 +61,6 @@ class Cylinder(threading.Thread):
     C = Cylinder(500, 100, 1000)
     C.start()
     C.join()
-
     #display.DisplayShape(W2.Shape(), update=True)
     #display.DisplayShape(S1.Shape(), update=True)
     #display.DisplayShape(S2.Shape(), update=True)
