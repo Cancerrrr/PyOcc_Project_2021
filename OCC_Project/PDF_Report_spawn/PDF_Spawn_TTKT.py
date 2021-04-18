@@ -117,8 +117,8 @@ class PDFGenerator:
         elif t_e >= 0.5*t or W >= 8*(t+t_e):
             L_R = 8*(t+t_e)
         # Step 2
-        L_H = min(t+0.78*sqrt(R_n*t_n), min(L_pr1+t, 8*(t+t_e))) # 容器外表面沿接管壁补强范围
-        L_I = 0 # 容器内表面沿接管壁补强范围
+        L_H = min(t+(0.78*sqrt(R_n*t_n)), min(L_pr1+t, 8*t))  # 容器外表面沿接管壁补强范围
+        L_I = 0  # 容器内表面沿接管壁补强范围
 
         if L_pr2>0:
             L_T1 = 0.75*sqrt(R_n*t_n2)
@@ -127,7 +127,7 @@ class PDFGenerator:
             L_I = min(L_T3, min(L_T1, L_T2))
 
         # Step 3
-        A_y = min((R_n+t_n)/sqrt(D_i+t)*t, 10)
+        A_y = min((2*R_n+t_n)/(sqrt(D_i+t)*t), 10)
         A_1 = t*L_R*max(A_y/4, 1)
         A_2 = 0
         if L_H <= L_pr3+t:
@@ -141,12 +141,12 @@ class PDFGenerator:
         A_T = A_1+A_2+A_3+A_42+A_43+A_5 # 靠近接管开孔处的有效总面积
 
         # Step 4
-        R_eff = D_i/2 # 壳体有效半径
+        R_eff = D_i/2  # 壳体有效半径
 
         # Step 5
-        f_N = P*R_n*(L_H-t) # 内压在容器外侧接管上引起的力
-        f_S = P*R_eff*(L_R+t_n) # 内压在壳体上引起的力
-        f_Y = P*R_eff*R_nc # 内压引起的不连续力
+        f_N = P*R_n*(L_H-t)  # 内压在容器外侧接管上引起的力
+        f_S = P*R_eff*(L_R+t_n)  # 内压在壳体上引起的力
+        f_Y = P*R_eff*R_nc  # 内压引起的不连续力
 
         # Step 6
         t_eff = 0 # 壳体有效厚度
@@ -172,7 +172,7 @@ class PDFGenerator:
         else:
             check_P_L = '不合格'
 
-        img = Image('./icons/TTKT.png')
+        img = Image('../icons/TTKT.png')
         img.drawWidth = 4 * inch
         img.drawHeight = 2.5 * inch
         self.basic_data = [['开孔补强计算', '', '计算单位', '压力容器计算软件', '', ''],

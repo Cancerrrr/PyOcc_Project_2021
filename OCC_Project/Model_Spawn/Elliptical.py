@@ -1,5 +1,4 @@
 from OCC.Core.gp import gp_Pnt, gp_OX, gp_Trsf, gp_Vec, gp_DZ, gp_Ax2, gp_Dir, gp_Ax1
-
 from OCC.Core.GC import GC_MakeArcOfCircle, GC_MakeSegment
 from OCC.Core.BRepBuilderAPI import BRepBuilderAPI_MakeEdge, BRepBuilderAPI_MakeWire, BRepBuilderAPI_MakeFace
 from OCC.Core.BRepPrimAPI import BRepPrimAPI_MakeRevol

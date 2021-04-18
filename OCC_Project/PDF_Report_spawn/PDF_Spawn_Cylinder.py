@@ -8,7 +8,7 @@ from reportlab.lib.enums import TA_CENTER, TA_LEFT
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 import tkinter as tk
-from tkinter import  filedialog
+from tkinter import filedialog
 pdfmetrics.registerFont(TTFont('pingbold', 'PingBold.ttf'))
 pdfmetrics.registerFont(TTFont('ping', 'ping.ttf'))
 pdfmetrics.registerFont(TTFont('hv', 'Helvetica.ttf'))
@@ -68,29 +68,29 @@ class PDFGenerator:
                                       ('BOTTOMPADDING', (0, 0), (-1, -1), 6),
                                       ('GRID', (0, 0), (-1, -1), 0.5, colors.black),
                                      ])
-        img = Image('./icons/TT.png')
+        img = Image('../icons/TT.png')
         img.drawWidth = 2 * inch
         img.drawHeight = 1.5 * inch
         # 参数计算
         R = float(self.cylinder_parameter['internal_diameter'])  # 壳体内径
-        t = float(self.cylinder_parameter['thickness']) # 设计厚度
+        t = float(self.cylinder_parameter['thickness'])  # 设计厚度
         L = float(self.cylinder_parameter['Length'])  # 筒体长度
         cylinder_pressure = float(self.cylinder_parameter['pressure'])  # 设计压力
         cylinder_temperature = float(self.cylinder_parameter['temperature'])  # 设计温度
         cylinder_corrosion = float(self.cylinder_parameter['corrosion'])  # 腐蚀系数
         cylinder_welding = float(self.cylinder_parameter['welding'])  # 焊接系数
 
-        t_min1 = (cylinder_pressure*R)/(148*cylinder_welding-0.6*cylinder_pressure) # 最小厚度t
+        t_min1 = (cylinder_pressure*R)/(147.6*cylinder_welding-0.6*cylinder_pressure) # 最小厚度t
         t_e = t - cylinder_corrosion # 有效厚度
-        P_MAWP1 = 148*cylinder_welding*t_e/(R+0.6*t_e) # 最大许用工作压力1
+        P_MAWP1 = 147.6*cylinder_welding*t_e/(R+0.6*t_e) # 最大许用工作压力1
 
         t_min2 = cylinder_pressure*R/(2*148*cylinder_welding+0.4*cylinder_pressure) # 计算厚度
-        P_MAWP2 = 2*148*cylinder_welding*t_e/(R-0.4*t_e) # 最大许用工作压力2
+        P_MAWP2 = 2*147.6*cylinder_welding*t_e/(R-0.4*t_e) # 最大许用工作压力2
 
         t_min = max(t_min1, t_min2) # 最终-最小厚度
         P_MAWP = min(P_MAWP1, P_MAWP2) # 最终-许用工作压力
 
-        P_MAPNC = 148*cylinder_welding*t/(R+0.6*t) # 最大许用工作压力
+        P_MAPNC = 147.6*cylinder_welding*t/(R+0.6*t) # 最大许用工作压力
         P_Sact = (cylinder_pressure*(R+0.6*t_e))/(cylinder_welding*t_e) # 最大许用应力计算
         check1 = ''
         check2 = ''
@@ -98,7 +98,8 @@ class PDFGenerator:
             check1 = '合格'
         else:
             check1 = '不合格'
-        if P_MAWP >= cylinder_pressure and 140*cylinder_welding >= P_Sact:
+
+        if P_MAWP >= cylinder_pressure and 147.6 >= P_Sact:
             check2 = '合格'
         else:
             check2 = '不合格'
@@ -112,7 +113,7 @@ class PDFGenerator:
                       ['设计厚度tn', t, 'mm', ''],
                       ['内半径', R, 'mm', ''],
                       ['材料', 'Q245R(板材)', '', ''],
-                      ['最大许用应力S', '148.00', 'MPa', ''],
+                      ['最大许用应力S', '147.60', 'MPa', ''],
                       ['设计温度许用应力St', '140.00', 'MPa', ''],
                       ['腐蚀裕量C', cylinder_corrosion, 'mm', ''],
                       ['焊接接头系数E', cylinder_welding, '', ''],
@@ -144,14 +145,14 @@ class PDFGenerator:
         doc.build(story)
 
 '''if __name__ == '__main__':
-    cylinder_parameter = {'pressure': '5.8',
-                'temperature': '100',
-                'corrosion': '3.00',
-                'welding': '1.00',
-                'internal_diameter': '1000.00',
-                'thickness': '55',
-                'Length': '500'}
+    cylinder_parameter = {'pressure': '3.1',
+                'temperature': '232',
+                'corrosion': '0',
+                'welding': '0.8',
+                'internal_diameter': '95',
+                'thickness': '3',
+                'Length': '800'}
 
-    cylinder_parameter = {}
-    pdf_generator = PDFGenerator('Cylinder_Report', cylinder_parameter)
+    "cylinder_parameter = {}"
+    pdf_generator = PDFGenerator(cylinder_parameter)
     pdf_generator.genTaskPDF()'''

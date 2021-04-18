@@ -85,7 +85,7 @@ class Ui_MainWindow(object):
         self.pushButton.setText("")
         self.pushButton.setStyleSheet('''QPushButton{background:#F7D674;border-radius:5px;}QPushButton:hover{background:yellow;}''')
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("./icons/3/openicon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("../icons/3/openicon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton.setIcon(icon)
         self.pushButton.setIconSize(QtCore.QSize(30, 30))
         self.pushButton.setObjectName("pushButton")
@@ -98,7 +98,7 @@ class Ui_MainWindow(object):
         self.pushButton_17.setSizePolicy(sizePolicy)
         self.pushButton_17.setText("")
         icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap("./icons/3/newicon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon1.addPixmap(QtGui.QPixmap("../icons/3/newicon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton_17.setIcon(icon1)
         self.pushButton_17.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_17.setObjectName("pushButton_17")
@@ -107,7 +107,7 @@ class Ui_MainWindow(object):
         self.pushButton_2 = QtWidgets.QPushButton(self.gridLayoutWidget)
         self.pushButton_2.setText("")
         icon2 = QtGui.QIcon()
-        icon2.addPixmap(QtGui.QPixmap("./icons/3/saveicon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon2.addPixmap(QtGui.QPixmap("../icons/3/saveicon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton_2.setIcon(icon2)
         self.pushButton_2.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_2.setObjectName("pushButton_2")
@@ -130,7 +130,7 @@ class Ui_MainWindow(object):
         self.pushButton_11 = QtWidgets.QPushButton(self.gridLayoutWidget_2)
         self.pushButton_11.setText("")
         icon3 = QtGui.QIcon()
-        icon3.addPixmap(QtGui.QPixmap("./icons/4/o324408.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon3.addPixmap(QtGui.QPixmap("../icons/4/o324408.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton_11.setIcon(icon3)
         self.pushButton_11.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_11.setObjectName("pushButton_11")
@@ -139,7 +139,7 @@ class Ui_MainWindow(object):
         self.pushButton_12 = QtWidgets.QPushButton(self.gridLayoutWidget_2)
         self.pushButton_12.setText("")
         icon4 = QtGui.QIcon()
-        icon4.addPixmap(QtGui.QPixmap("./icons/4/o324412.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon4.addPixmap(QtGui.QPixmap("../icons/4/o324412.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton_12.setIcon(icon4)
         self.pushButton_12.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_12.setObjectName("pushButton_12")
@@ -148,7 +148,7 @@ class Ui_MainWindow(object):
         self.pushButton_3 = QtWidgets.QPushButton(self.gridLayoutWidget_2)
         self.pushButton_3.setText("")
         icon5 = QtGui.QIcon()
-        icon5.addPixmap(QtGui.QPixmap("./icons/4/o324405.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon5.addPixmap(QtGui.QPixmap("../icons/4/o324405.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton_3.setIcon(icon5)
         self.pushButton_3.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_3.setObjectName("pushButton_3")
@@ -157,7 +157,7 @@ class Ui_MainWindow(object):
         self.pushButton_4 = QtWidgets.QPushButton(self.gridLayoutWidget_2)
         self.pushButton_4.setText("")
         icon6 = QtGui.QIcon()
-        icon6.addPixmap(QtGui.QPixmap("./icons/4/o324406.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon6.addPixmap(QtGui.QPixmap("../icons/4/o324406.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton_4.setIcon(icon6)
         self.pushButton_4.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_4.setObjectName("pushButton_4")
@@ -166,7 +166,7 @@ class Ui_MainWindow(object):
         self.pushButton_5 = QtWidgets.QPushButton(self.gridLayoutWidget_2)
         self.pushButton_5.setText("")
         icon7 = QtGui.QIcon()
-        icon7.addPixmap(QtGui.QPixmap("./icons/4/o324407.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon7.addPixmap(QtGui.QPixmap("../icons/4/o324407.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton_5.setIcon(icon7)
         self.pushButton_5.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_5.setObjectName("pushButton_5")
@@ -175,7 +175,7 @@ class Ui_MainWindow(object):
         self.pushButton_6 = QtWidgets.QPushButton(self.gridLayoutWidget_2)
         self.pushButton_6.setText("")
         icon8 = QtGui.QIcon()
-        icon8.addPixmap(QtGui.QPixmap("./icons/4/o324409.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon8.addPixmap(QtGui.QPixmap("../icons/4/o324409.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton_6.setIcon(icon8)
         self.pushButton_6.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_6.setObjectName("pushButton_6")
@@ -184,7 +184,7 @@ class Ui_MainWindow(object):
         self.pushButton_7 = QtWidgets.QPushButton(self.gridLayoutWidget_2)
         self.pushButton_7.setText("")
         icon9 = QtGui.QIcon()
-        icon9.addPixmap(QtGui.QPixmap("./icons/4/o324410.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon9.addPixmap(QtGui.QPixmap("../icons/4/o324410.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton_7.setIcon(icon9)
         self.pushButton_7.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_7.setObjectName("pushButton_7")
@@ -193,7 +193,7 @@ class Ui_MainWindow(object):
         self.pushButton_8 = QtWidgets.QPushButton(self.gridLayoutWidget_2)
         self.pushButton_8.setText("")
         icon10 = QtGui.QIcon()
-        icon10.addPixmap(QtGui.QPixmap("./icons/4/o324411.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon10.addPixmap(QtGui.QPixmap("../icons/4/o324411.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton_8.setIcon(icon10)
         self.pushButton_8.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_8.setObjectName("pushButton_8")
@@ -216,7 +216,7 @@ class Ui_MainWindow(object):
         self.pushButton_10 = QtWidgets.QPushButton(self.gridLayoutWidget_3)
         self.pushButton_10.setText("")
         icon11 = QtGui.QIcon()
-        icon11.addPixmap(QtGui.QPixmap("./icons/6/codecalc2015_icon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon11.addPixmap(QtGui.QPixmap("../icons/6/codecalc2015_icon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton_10.setIcon(icon11)
         self.pushButton_10.setIconSize(QtCore.QSize(20, 20))
         self.pushButton_10.setObjectName("pushButton_10")
@@ -225,7 +225,7 @@ class Ui_MainWindow(object):
         self.pushButton_18 = QtWidgets.QPushButton(self.gridLayoutWidget_3)
         self.pushButton_18.setText("")
         icon12 = QtGui.QIcon()
-        icon12.addPixmap(QtGui.QPixmap("./icons/6/codecalcicon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon12.addPixmap(QtGui.QPixmap("../icons/6/codecalcicon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton_18.setIcon(icon12)
         self.pushButton_18.setIconSize(QtCore.QSize(20, 20))
         self.pushButton_18.setObjectName("pushButton_18")
@@ -234,7 +234,7 @@ class Ui_MainWindow(object):
         self.pushButton_9 = QtWidgets.QPushButton(self.gridLayoutWidget_3)
         self.pushButton_9.setText("")
         icon13 = QtGui.QIcon()
-        icon13.addPixmap(QtGui.QPixmap("./icons/6/inputtabsicon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon13.addPixmap(QtGui.QPixmap("../icons/6/inputtabsicon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton_9.setIcon(icon13)
         self.pushButton_9.setIconSize(QtCore.QSize(20, 20))
         self.pushButton_9.setObjectName("pushButton_9")
@@ -459,7 +459,7 @@ class Ui_MainWindow(object):
         self.pushButton_13 = QtWidgets.QPushButton(self.gridLayoutWidget_5)
         self.pushButton_13.setText("")
         icon14 = QtGui.QIcon()
-        icon14.addPixmap(QtGui.QPixmap("./icons/9/analyzeicon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon14.addPixmap(QtGui.QPixmap("../icons/9/analyzeicon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton_13.setIcon(icon14)
         self.pushButton_13.setIconSize(QtCore.QSize(20, 20))
         self.pushButton_13.setObjectName("pushButton_13")
@@ -468,7 +468,7 @@ class Ui_MainWindow(object):
         self.pushButton_14 = QtWidgets.QPushButton(self.gridLayoutWidget_5)
         self.pushButton_14.setText("")
         icon15 = QtGui.QIcon()
-        icon15.addPixmap(QtGui.QPixmap("./icons/9/o322498.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon15.addPixmap(QtGui.QPixmap("../icons/9/o322498.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton_14.setIcon(icon15)
         self.pushButton_14.setIconSize(QtCore.QSize(20, 20))
         self.pushButton_14.setObjectName("pushButton_14")
@@ -477,7 +477,7 @@ class Ui_MainWindow(object):
         self.pushButton_15 = QtWidgets.QPushButton(self.gridLayoutWidget_5)
         self.pushButton_15.setText("")
         icon16 = QtGui.QIcon()
-        icon16.addPixmap(QtGui.QPixmap("./icons/9/o322496.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon16.addPixmap(QtGui.QPixmap("../icons/9/o322496.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton_15.setIcon(icon16)
         self.pushButton_15.setIconSize(QtCore.QSize(20, 20))
         self.pushButton_15.setObjectName("pushButton_15")
@@ -859,26 +859,26 @@ class Ui_MainWindow(object):
 
     # Send Input Parameter to MainWindow
     def sendmsg_TTKT(self):
-        D_i = self.TT.lineEdit.text() # 壳内半径
-        t = self.TT.lineEdit_2.text() # 壳厚度
-        l = self.TT.lineEdit_3.text() # 筒体长度
-        R_n = self.TT.lineEdit_4.text() # 接管内半径
-        L_pr1 = self.TT.lineEdit_5.text() # 容器壁外侧接管伸出长度
-        t_n = self.TT.lineEdit_6.text() # 接管壁厚度
-        t_n2 = self.TT.lineEdit_7.text() # 变厚度接管较薄部分公称厚度
-        t_e = self.TT.lineEdit_8.text() # 补强板厚度
-        L_pr2 = self.TT.lineEdit_9.text() # 容器壁内侧接管伸出长度
-        L_pr3 = self.TT.lineEdit_10.text() # 外侧变厚度t的长度
-        P = self.TT.lineEdit_11.text() # 设计压力
-        T = self.TT.lineEdit_12.text() # 设计温度
-        C_2 = self.TT.lineEdit_13.text() # 壳体腐蚀裕量
-        C_2t = self.TT.lineEdit_14.text() # 接管腐蚀裕量
-        W = self.TT.lineEdit_15.text() # 补强板宽度
-        L_42 = self.TT.lineEdit_16.text() # 补强板焊制容器焊脚长度
-        L_43 = self.TT.lineEdit_17.text() # 内测接管填角焊缝的焊脚长度
-        R_nc = self.TT.lineEdit_18.text() # 容器上沿接管开口方向接管半径
-        E = self.TT.lineEdit_19.text() # 焊接接头系数
-        thita = self.TT.lineEdit_20.text() # 接管轴线与筒体表面法线夹角
+        D_i = self.TT.lineEdit.text()  # 壳内半径
+        t = self.TT.lineEdit_2.text()  # 壳厚度
+        l = self.TT.lineEdit_3.text()  # 筒体长度
+        R_n = self.TT.lineEdit_4.text()  # 接管内半径
+        L_pr1 = self.TT.lineEdit_5.text()  # 容器壁外侧接管伸出长度
+        t_n = self.TT.lineEdit_6.text()  # 接管壁厚度
+        t_n2 = self.TT.lineEdit_7.text()  # 变厚度接管较薄部分公称厚度
+        t_e = self.TT.lineEdit_8.text()  # 补强板厚度
+        L_pr2 = self.TT.lineEdit_9.text()  # 容器壁内侧接管伸出长度
+        L_pr3 = self.TT.lineEdit_10.text()  # 外侧变厚度t的长度
+        P = self.TT.lineEdit_11.text()  # 设计压力
+        T = self.TT.lineEdit_12.text()  # 设计温度
+        C_2 = self.TT.lineEdit_13.text()  # 壳体腐蚀裕量
+        C_2t = self.TT.lineEdit_14.text()  # 接管腐蚀裕量
+        W = self.TT.lineEdit_15.text()  # 补强板宽度
+        L_42 = self.TT.lineEdit_16.text()  # 补强板焊制容器焊脚长度
+        L_43 = self.TT.lineEdit_17.text()  # 内测接管填角焊缝的焊脚长度
+        R_nc = self.TT.lineEdit_18.text()  # 容器上沿接管开口方向接管半径
+        E = self.TT.lineEdit_19.text()  # 焊接接头系数
+        thita = self.TT.lineEdit_20.text()  # 接管轴线与筒体表面法线夹角
 
         if self.is_number(D_i) and self.is_number(t)\
             and self.is_number(l) and self.is_number(R_n)\
