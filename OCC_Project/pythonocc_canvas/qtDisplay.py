@@ -108,7 +108,7 @@ class qtViewer3d(qtBaseViewer):
         self._qApp = value
 
     def InitDriver(self):
-        self._display = OCCViewer.Viewer3d(self.GetHandle())
+        self._display = OCCViewer.Viewer3d()
         self._display.Create()
         # background gradient
         rgb_list1 = [206, 215, 222]

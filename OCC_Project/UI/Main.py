@@ -11,7 +11,12 @@ from PyQt5.QtWidgets import QDialog
 from UI import Cylinder_design_dialog
 from UI import Error_Dialog
 from Model_Spawn import Elliptical
-from pythonocc_canvas.qtDisplay import qtViewer3d
+
+# from pythonocc_canvas.qtDisplay import qtViewer3d
+# from OCC.Display.backend import load_backend
+# load_backend('qt-pyqt5')
+import OCC.Display.qtDisplay as qtDisplay
+
 from Model_Spawn import cylinder
 from Model_Spawn import TongTiKaiKong
 from UI import  TTkaikong
@@ -682,7 +687,7 @@ class Ui_MainWindow(object):
 
 
         # python OCC UI show
-        MainWindow.canva = qtViewer3d(self.centralwidget)
+        MainWindow.canva = qtDisplay.qtViewer3d(self.centralwidget)
 
         MainWindow.canva.setMaximumSize(10000, 10000)
         MainWindow.canva.resize(735, 550)

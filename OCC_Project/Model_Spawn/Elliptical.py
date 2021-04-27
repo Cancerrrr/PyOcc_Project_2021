@@ -7,12 +7,12 @@ from OCC.Extend.TopologyUtils import TopologyExplorer
 from OCC.Display.SimpleGui import init_display
 import math
 
-
+display, start_display, add_menu, add_function_to_menu = init_display()
 
 
 class Elliptical_Head():
     def __init__(self):
-        #display, start_display, add_menu, add_function_to_menu = init_display()
+        # display, start_display, add_menu, add_function_to_menu = init_display()
         Location = gp_Pnt(0, 0, 0)
         Axis = gp_Dir(0, 0, 1)
         b = math.pi
@@ -79,8 +79,8 @@ class Elliptical_Head():
         return self.A
 
 
-'''if __name__ == "__main__":
+if __name__ == "__main__":
     Elliptical = Elliptical_Head()
     A = Elliptical.getElliptical_Head()
     display.DisplayShape(A.Shape(), update=True)
-    start_display()'''
+    start_display()

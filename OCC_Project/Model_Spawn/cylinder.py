@@ -67,7 +67,7 @@ class Cylinder(threading.Thread):
     display.DisplayShape(C.new_thing1, update=True)
     start_display()'''
 
-# In[ ]:
+
 
 
 

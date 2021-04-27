@@ -10,9 +10,9 @@ from reportlab.lib import colors
 from reportlab.lib.enums import TA_CENTER, TA_LEFT
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
-pdfmetrics.registerFont(TTFont('pingbold', 'PingBold.ttf'))
-pdfmetrics.registerFont(TTFont('ping', 'ping.ttf'))
-pdfmetrics.registerFont(TTFont('hv', 'Helvetica.ttf'))
+pdfmetrics.registerFont(TTFont('simsun', 'simsun.ttc'))
+# pdfmetrics.registerFont(TTFont('simsun', 'simsun.ttf'))
+# pdfmetrics.registerFont(TTFont('simsun', 'Helvetica.ttf'))
 import tkinter as tk
 from tkinter import  filedialog
 
@@ -24,18 +24,18 @@ class PDFGenerator:
         Folderpath = filedialog.asksaveasfilename()  # 获得选择好的文件夹
         self.TTKT_Parameter = TTKT_Parameter
         self.file_path = Folderpath
-        self.title_style = ParagraphStyle(name="TitleStyle", fontName="pingbold", fontSize=48, alignment=TA_LEFT,)
-        self.sub_title_style = ParagraphStyle(name="SubTitleStyle", fontName="hv", fontSize=32,
+        self.title_style = ParagraphStyle(name="TitleStyle", fontName="simsun", fontSize=48, alignment=TA_LEFT,)
+        self.sub_title_style = ParagraphStyle(name="SubTitleStyle", fontName="simsun", fontSize=32,
                                               textColor=colors.HexColor(0x666666), alignment=TA_LEFT, )
-        self.content_style = ParagraphStyle(name="ContentStyle", fontName="ping", fontSize=18, leading=25, spaceAfter=20,
+        self.content_style = ParagraphStyle(name="ContentStyle", fontName="simsun", fontSize=18, leading=25, spaceAfter=20,
                                             underlineWidth=1, alignment=TA_LEFT, )
-        self.foot_style = ParagraphStyle(name="FootStyle", fontName="ping", fontSize=14, textColor=colors.HexColor(0xB4B4B4),
+        self.foot_style = ParagraphStyle(name="FootStyle", fontName="simsun", fontSize=14, textColor=colors.HexColor(0xB4B4B4),
                                          leading=25, spaceAfter=20, alignment=TA_CENTER, )
-        self.table_title_style = ParagraphStyle(name="TableTitleStyle", fontName="pingbold", fontSize=20, leading=25,
+        self.table_title_style = ParagraphStyle(name="TableTitleStyle", fontName="simsun", fontSize=20, leading=25,
                                                 spaceAfter=10, alignment=TA_LEFT, )
-        self.sub_table_style = ParagraphStyle(name="SubTableTitleStyle", fontName="ping", fontSize=16, leading=25,
+        self.sub_table_style = ParagraphStyle(name="SubTableTitleStyle", fontName="simsun", fontSize=16, leading=25,
                                                 spaceAfter=10, alignment=TA_LEFT, )
-        self.basic_style = TableStyle([('FONTNAME', (0, 0), (-1, -1), 'ping'),
+        self.basic_style = TableStyle([('FONTNAME', (0, 0), (-1, -1), 'simsun'),
                                        ('FONTSIZE', (0, 0), (-1, -1), 12),
                                        ('ALIGN', (0, 0), (5, 0), 'CENTER'),
                                        ('ALIGN', (0, 2), (5, 2), 'CENTER'),
@@ -77,7 +77,7 @@ class PDFGenerator:
                                        ('SPAN', (0, 31), (5, 31)),
                                        ('GRID', (0, 0), (-1, -1), 0.5, colors.black),
                                        ])
-        self.common_style = TableStyle([('FONTNAME', (0, 0), (-1, -1), 'ping'),
+        self.common_style = TableStyle([('FONTNAME', (0, 0), (-1, -1), 'simsun'),
                                       ('FONTSIZE', (0, 0), (-1, -1), 12),
                                       ('ALIGN', (0, 0), (-1, -1), 'LEFT'),
                                       ('VALIGN', (0, 0), (-1, -1), 'MIDDLE'),
@@ -214,7 +214,7 @@ class PDFGenerator:
         stylesheet = getSampleStyleSheet()
         body_style = stylesheet["BodyText"]
         body_style.wordWrap = 'CJK'
-        body_style.fontName = 'ping'
+        body_style.fontName = 'simsun'
         body_style.fontSize = 12
         # 基础参数
         basic_table = Table(self.basic_data, colWidths=None, rowHeights=None, style=self.basic_style)
@@ -222,26 +222,26 @@ class PDFGenerator:
         doc = SimpleDocTemplate(self.file_path + ".pdf", leftSpace=37 * mm, rightMargin=15 * mm, pagesize = A4)
         doc.build(story)
 
-'''if __name__ == '__main__':
-    parameter = {'shell_internal_radius': 1000,
-                                   'shell_thickness': 35,
-                                   'cylinder_length': 2000,
-                                   'pipe_internal_radius': 35,
-                                   'pipe_out_length': 300,
-                                   'pipe_thickness': 35,
-                                   'nominal_thickness': 30,
-                                   'plate_thickness':30,
-                                   'pipe_in_length': 100,
-                                   'out_thickness_length': 30,
-                                   'pressure': 5.8,
-                                   'temperature': 100,
-                                   'shell_corrosion': 1.5,
-                                   'pipe_corrosion': 1.5,
-                                   'plate_width': 300,
-                                   'L_42': 15,
-                                   'L_43': 15,
-                                   'R_nc': 20,
-                                   'E': 1,
-                                   'thita': 30}
-    pdf_generator = PDFGenerator(parameter)
-    pdf_generator.genTaskPDF()'''
+# if __name__ == '__main__':
+#     parameter = {'shell_internal_radius': 1000,
+#                                    'shell_thickness': 35,
+#                                    'cylinder_length': 2000,
+#                                    'pipe_internal_radius': 35,
+#                                    'pipe_out_length': 300,
+#                                    'pipe_thickness': 35,
+#                                    'nominal_thickness': 30,
+#                                    'plate_thickness':30,
+#                                    'pipe_in_length': 100,
+#                                    'out_thickness_length': 30,
+#                                    'pressure': 5.8,
+#                                    'temperature': 100,
+#                                    'shell_corrosion': 1.5,
+#                                    'pipe_corrosion': 1.5,
+#                                    'plate_width': 300,
+#                                    'L_42': 15,
+#                                    'L_43': 15,
+#                                    'R_nc': 20,
+#                                    'E': 1,
+#                                    'thita': 30}
+#     pdf_generator = PDFGenerator(parameter)
+#     pdf_generator.genTaskPDF()

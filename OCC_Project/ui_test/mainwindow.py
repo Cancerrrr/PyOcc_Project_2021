@@ -6,8 +6,10 @@ from PyQt5 import QtCore
 from PyQt5.QtWidgets import QFileDialog, QAction, QApplication, QMainWindow, QHBoxLayout, QDockWidget, \
     QListWidget, QLabel
 
-from pythonocc_canvas.qtDisplay import qtViewer3d
-
+# from pythonocc_canvas.qtDisplay import qtViewer3d
+from OCC.Display.backend import load_backend
+load_backend('qt-pyqt5')
+import OCC.Display.qtDisplay as qtDisplay
 
 class MainWindow(QMainWindow):
     def __init__(self, *args):
@@ -17,7 +19,7 @@ class MainWindow(QMainWindow):
         QMainWindow.__init__(self, *args)
         layout=QHBoxLayout()         # 水平布局
 
-        self.canva = qtViewer3d(self)
+        self.canva = qtDisplay.qtViewer3d(self)
         # 显示设置
         self.canva.InitDriver()        # canva的驱动,设置驱动后，才能成功display
 
@@ -86,11 +88,14 @@ class MainWindow(QMainWindow):
 
 
 
-if __name__ == '__main__':
-        app = QApplication(sys.argv)  # 创建应用
-        win = MainWindow()            # 创建主窗口
-        win.canva.qApp = app          # 将自己创建的应用与canva中的 Qapp连接起来
-        win.show()                    # 主窗口显示
-        win.canva.InitDriver()        # 社区反馈，添加此语句，以下的bug不会出现。
-        win.raise_()                  # 窗口置顶
-        sys.exit(app.exec_())
+# if __name__ == '__main__':
+#         app = QApplication(sys.argv)  # 创建应用
+#         win = MainWindow()            # 创建主窗口
+#         win.canva.qApp = app          # 将自己创建的应用与canva中的 Qapp连接起来
+#         win.show()                    # 主窗口显示
+#         win.canva.InitDriver()        # 社区反馈，添加此语句，以下的bug不会出现。
+#         win.canva.setMaximumSize(10000, 10000)
+#         win.canva.resize(735, 550)
+#         win.canva.move(200, 140)
+#         win.raise_()                  # 窗口置顶
+#         sys.exit(app.exec_())
