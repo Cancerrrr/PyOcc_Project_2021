@@ -15,9 +15,6 @@ from tkinter import filedialog
 pdfmetrics.registerFont(TTFont('simsun', 'simsun.ttc'))
 
 
-# pdfmetrics.registerFont(TTFont('simsun', 'simsun.ttf'))
-# pdfmetrics.registerFont(TTFont('simsun', 'Helvetica.ttf'))
-
 # 生成PDF文件
 class PDFGenerator:
     def __init__(self, elliptical_parameter={}):
