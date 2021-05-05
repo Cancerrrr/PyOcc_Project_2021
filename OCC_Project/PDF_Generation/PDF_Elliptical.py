@@ -1,5 +1,5 @@
 import math
-
+import latexify
 import reportlab
 from reportlab.lib.pagesizes import A4
 from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Image, PageBreak, Table, TableStyle, LongTable
@@ -12,6 +12,7 @@ from reportlab.pdfbase.ttfonts import TTFont
 import tkinter as tk
 from tkinter import filedialog
 
+#需要宋体字体
 pdfmetrics.registerFont(TTFont('simsun', 'simsun.ttc'))
 
 
@@ -75,8 +76,8 @@ class PDFGenerator:
         # 参数计算
         pressure = float(self.elliptical_parameter['Pressure'])  # 计算压力 MPa
         temperature = float(self.elliptical_parameter['temperature'])  # 设计温度 摄氏度
-        D = float(self.elliptical_parameter['Equipment_inner_diameter'])  # 封头内径
-        h = float(self.elliptical_parameter['Depth'])  # 曲面内深度
+        Di = float(self.elliptical_parameter['Equipment_inner_diameter'])  # 封头内径
+        hi = float(self.elliptical_parameter['Depth'])  # 曲面内深度
         allowable_stress = float(self.elliptical_parameter['allowable_stress'])  # 设计温度下的材料的许用应力
         C1 = float(self.elliptical_parameter['deviation'])  # 钢板负偏差
         C2 = float(self.elliptical_parameter['Corrosion_allowance'])  # 腐蚀裕量
@@ -84,8 +85,8 @@ class PDFGenerator:
         E = float(self.elliptical_parameter['Welding_factor'])  # 焊接系数
 
         # 封头计算厚度
-        K = (2 + math.pow((0.5 * D / h), 2)) / 6  # 椭圆封头形状系数
-        calculate_thickness = round((K * pressure * D) / (2 * allowable_stress * E - 0.5 * pressure), 2)
+        K = (2 + math.pow((0.5 * Di / hi), 2)) / 6  # 椭圆封头形状系数
+        calculate_thickness = round((K * pressure * Di) / (2 * allowable_stress * E - 0.5 * pressure), 2)
 
         # 封头设计厚度
         design_thickness = round((calculate_thickness + C1 + C2 + C3), 2)
@@ -100,7 +101,7 @@ class PDFGenerator:
 
         # 应力计算
         # 最大允许工作压力计算
-        max_work_press = round(((2 * allowable_stress * E * effective_thickness) / (K * D + 0.5 * effective_thickness)), 2)
+        max_work_press = round(((2 * allowable_stress * E * effective_thickness) / (K * Di + 0.5 * effective_thickness)), 2)
 
         # 校核
         # 厚度校核
@@ -124,14 +125,14 @@ class PDFGenerator:
                            ['计算条件', '', '', '椭圆封头简图'],
                            ['计算压力P', pressure, 'MPa', img],
                            ['设计温度t', temperature, '℃', ''],
-                           ['内径Di', D, 'mm', ''],
-                           ['曲面深度hi', h, 'mm', ''],
+                           ['内径Di', Di, 'mm', ''],
+                           ['曲面深度hi', hi, 'mm', ''],
                            ['材料', 'Q345R(板材)', '', ''],
                            ['设计温度许用应力St', allowable_stress, 'MPa', ''],
                            ['钢板负偏差C1', C1, 'mm', ''],
                            ['腐蚀裕量C2', C2, 'mm', ''],
                            ['加工减薄量', C3, 'mm', ''],
-                           ['焊接接头系数', E, '', ''],
+                           ['焊接接头系数'+chr(934), E, '', ''],
                            ['厚度计算', '', '', ''],
                            ['形状系数', K, '', ''],
                            ['计算厚度', calculate_thickness, 'mm', ''],
@@ -158,17 +159,17 @@ class PDFGenerator:
         doc.build(story)
 
 
-if __name__ == '__main__':
-
-    elliptical_parameter = {'Pressure': '1.2',
-                            'temperature': '200.00',
-                            'Equipment_inner_diameter': '2000.00',
-                            'Depth': '500.00',
-                            'allowable_stress': '183',
-                            'deviation': '0.30',
-                            'Corrosion_allowance': '3.0',
-                            'Processing_thinning': '1.96',
-                            'Welding_factor': '0.85'}
-
-    pdf_generator = PDFGenerator(elliptical_parameter)
-    pdf_generator.genTaskPDF()
+# if __name__ == '__main__':
+#
+#     elliptical_parameter = {'Pressure': '1.2',
+#                             'temperature': '200.00',
+#                             'Equipment_inner_diameter': '2000.00',
+#                             'Depth': '500.00',
+#                             'allowable_stress': '183',
+#                             'deviation': '0.30',
+#                             'Corrosion_allowance': '3.0',
+#                             'Processing_thinning': '1.96',
+#                             'Welding_factor': '0.85'}
+#
+#     pdf_generator = PDFGenerator(elliptical_parameter)
+#     pdf_generator.genTaskPDF()

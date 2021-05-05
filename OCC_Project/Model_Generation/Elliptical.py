@@ -7,28 +7,30 @@ from OCC.Extend.TopologyUtils import TopologyExplorer
 from OCC.Display.SimpleGui import init_display
 import math
 
-display, start_display, add_menu, add_function_to_menu = init_display()
 
 
 class Elliptical_Head():
-    def __init__(self):
+    # R = 500  # 外长半径
+    # hi = 300  # 外短半径
+    # a = 40  # 壁厚
+    def __init__(self, R=600, hi=300, a=40):
         # display, start_display, add_menu, add_function_to_menu = init_display()
         Location = gp_Pnt(0, 0, 0)
         Axis = gp_Dir(0, 0, 1)
-        b = math.pi
-        R = 500  # 外长径
-        r = 300  # 外短径
-        l = 300  # 突出的长度
-        a = 40  # 壁厚
+        self.R = R
+        self.hi = hi
+        self.a = a
+        l = 25  # 突出的长度
+
         CircleAxis = gp_Ax2(Location, Axis)
         aPnt1 = gp_Pnt(0, 0, R)
-        aPnt2 = gp_Pnt(r, 0, 0)
+        aPnt2 = gp_Pnt(hi, 0, 0)
         aPnt3 = gp_Pnt(0, 0, -R)
         aPnt4 = gp_Pnt(-l, 0, R)
         aPnt5 = gp_Pnt(-l, 0, -R)
         aPnt6 = gp_Pnt(-l, 0, -R + a)
         aPnt7 = gp_Pnt(0, 0, -R + a)
-        aPnt8 = gp_Pnt(r - a, 0, 0)
+        aPnt8 = gp_Pnt(hi - a, 0, 0)
         aPnt9 = gp_Pnt(0, 0, R - a)
         aPnt10 = gp_Pnt(-l, 0, R - a)
 
@@ -72,15 +74,16 @@ class Elliptical_Head():
         splitter.Perform()
         # 显示分割后的面
         for shape in TopologyExplorer(splitter.Shape()).faces():
-            #display.DisplayShape(shape, update=True)
-        # 旋转
+            # display.DisplayShape(shape, update=True)
+            # 旋转
             self.A = BRepPrimAPI_MakeRevol(shape, gp_Ax1(Location, gp_Dir(1, 0, 0)))
+
     def getElliptical_Head(self):
         return self.A
 
 
-if __name__ == "__main__":
-    Elliptical = Elliptical_Head()
-    A = Elliptical.getElliptical_Head()
-    display.DisplayShape(A.Shape(), update=True)
-    start_display()
+# if __name__ == "__main__":
+#     Elliptical = Elliptical_Head()
+#     A = Elliptical.getElliptical_Head()
+#     display.DisplayShape(A.Shape(), update=True)
+#     start_display()

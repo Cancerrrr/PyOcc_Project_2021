@@ -5,7 +5,6 @@ from Main.main_3dview import MainWindowView
 
 
 if __name__ == '__main__':
-    # QApplication.setAttribute(Qt.AA_EnableHighDpiScaling)
     app = QApplication(sys.argv)
     main_window = MainWindowView()
     main_window.show()
