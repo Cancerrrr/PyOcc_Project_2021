@@ -11,16 +11,15 @@ from PyQt5.QtWidgets import QDialog
 from PyQt5.QtWidgets import QApplication, QMainWindow
 from UI import Cylinder_design_dialog
 from UI import Error_Dialog
-from Model_Spawn import Elliptical
 from pythonocc_canvas.qtDisplay import qtViewer3d
 from Model_Spawn import cylinder
 from Model_Spawn import TongTiKaiKong
 from UI import  TTkaikong
 from PDF_Report_spawn import PDF_Spawn_Cylinder, PDF_Spawn_TTKT
 
-class Ui_MainWindow(QMainWindow):
+class Ui_MainWindow(object):
     def __init__(self):
-        super().__init__()
+
         #Initialize design UI(Cylinder)
         self.disk = Cylinder_design_dialog.Ui_Dialog()
         self.Dialog_cylinder = QDialog()
@@ -54,7 +53,7 @@ class Ui_MainWindow(QMainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(1067, 711)
         MainWindow.setMaximumSize(QtCore.QSize(16777215, 16777215))
-        'MainWindow.setFixedSize(MainWindow.width(), MainWindow.height())'
+        MainWindow.setFixedSize(MainWindow.width(), MainWindow.height())
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setEnabled(True)
         self.centralwidget.setObjectName("centralwidget")
@@ -702,8 +701,12 @@ class Ui_MainWindow(QMainWindow):
         self.display.set_bg_gradient_color(rgb_list1, rgb_list2)  # 设置背景渐变色
         self.display.display_triedron()  # display black trihedron
 
+        #self.canva_area.layout().addWidget(self.display)
+        #MainWindow.canva_area.layout().addWidget(MainWindow.canva)
+
+
         # setAction
-        self.pushButton_4.clicked.connect(self.showElliptical)
+        #self.pushButton_4.clicked.connect(self.showElliptical)
         self.pushButton_3.clicked.connect(self.design_Cylinder)
         self.pushButton_7.clicked.connect(self.design_TTkaikong)
         self.pushButton_10.clicked.connect(self.spawn_PDF_File)
@@ -720,29 +723,29 @@ class Ui_MainWindow(QMainWindow):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.label_2.setText(_translate("MainWindow", "Save"))
-        self.label.setText(_translate("MainWindow", "Open"))
-        self.label_13.setText(_translate("MainWindow", "New"))
-        self.label_3.setText(_translate("MainWindow", "File"))
-        self.label_4.setText(_translate("MainWindow", "Elements"))
-        self.label_5.setText(_translate("MainWindow", "Input/Output"))
-        self.label_6.setText(_translate("MainWindow", "Utility"))
-        self.label_7.setText(_translate("MainWindow", "Auxiliary"))
-        self.label_8.setText(_translate("MainWindow", "Analyse"))
-        self.label_9.setText(_translate("MainWindow", "Design Code"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "压力容器设计软件"))
+        self.label_2.setText(_translate("MainWindow", "保存"))
+        self.label.setText(_translate("MainWindow", "打开"))
+        self.label_13.setText(_translate("MainWindow", "新建"))
+        self.label_3.setText(_translate("MainWindow", "文件"))
+        self.label_4.setText(_translate("MainWindow", "元素"))
+        self.label_5.setText(_translate("MainWindow", "输入/输出"))
+        self.label_6.setText(_translate("MainWindow", "工具"))
+        self.label_7.setText(_translate("MainWindow", "备用"))
+        self.label_8.setText(_translate("MainWindow", "分析"))
+        self.label_9.setText(_translate("MainWindow", "设计规范"))
         self.label_11.setText(_translate("MainWindow", "Div.2 Class"))
         self.comboBox.setItemText(0, _translate("MainWindow", "Division1"))
         self.comboBox_2.setItemText(0, _translate("MainWindow", "Inches"))
-        self.label_10.setText(_translate("MainWindow", "Units"))
-        self.label_12.setText(_translate("MainWindow", "Units/Code"))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), _translate("MainWindow", "Home"))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), _translate("MainWindow", "Tools"))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_3), _translate("MainWindow", "View"))
+        self.label_10.setText(_translate("MainWindow", "单位"))
+        self.label_12.setText(_translate("MainWindow", "单位/规范"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), _translate("MainWindow", "主页"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), _translate("MainWindow", "工具"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_3), _translate("MainWindow", "视图"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_4), _translate("MainWindow", "3D"))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_9), _translate("MainWindow", "Diagnostics"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_9), _translate("MainWindow", "分析"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_10), _translate("MainWindow", "ESL"))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_11), _translate("MainWindow", "Help"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_11), _translate("MainWindow", "帮助"))
         self.tableWidget_2.setSortingEnabled(False)
         item = self.tableWidget_2.verticalHeaderItem(0)
         item.setText(_translate("MainWindow", "From Node"))
@@ -798,16 +801,16 @@ class Ui_MainWindow(QMainWindow):
         self.tabWidget_2.setTabText(self.tabWidget_2.indexOf(self.tab_6), _translate("MainWindow", "Design Constraints"))
         self.tabWidget_2.setTabText(self.tabWidget_2.indexOf(self.tab_7), _translate("MainWindow", "Load Cases"))
         self.tabWidget_2.setTabText(self.tabWidget_2.indexOf(self.tab_8), _translate("MainWindow", "Wind Data"))
-        self.menuFile.setTitle(_translate("MainWindow", "File"))
-        self.menuOutput.setTitle(_translate("MainWindow", "Output"))
+        self.menuFile.setTitle(_translate("MainWindow", "文件"))
+        self.menuOutput.setTitle(_translate("MainWindow", "输出"))
 
     # show Elliptical model
-    def showElliptical(self):
-        Elli = Elliptical.Elliptical_Head()
-        A = Elli.getElliptical_Head()
-        self.display.EraseAll()
-        self.display.ResetView()
-        self.display.DisplayShape(A.Shape(), update=True)
+    # def showElliptical(self):
+    #     Elli = Elliptical.Elliptical_Head()
+    #     A = Elli.getElliptical_Head()
+    #     self.display.EraseAll()
+    #     self.display.ResetView()
+    #     self.display.DisplayShape(A.Shape(), update=True)
 
     # show cylinder design UI and input parameter to paint model
     def design_Cylinder(self):
